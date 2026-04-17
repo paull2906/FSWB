@@ -6,3 +6,14 @@ venv/
 
 # Optional: ignore instance folder (used by Flask web app, e.g., for SQLite database)
 instance/
+
+# --- Wichtig für Paul (Mac & Security) ---
+.DS_Store
+.env
+
+
+
+        s_pfeiffer24@hwr-berlin.de
+
+git config --global user.email "s_pfeiffer24@hwr-berlin.de"
+git config --global user.name "paull2906"
