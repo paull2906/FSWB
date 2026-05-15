@@ -57,9 +57,9 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 | Contribution | Proof, e.g., git commits | Sources used |
 | :-- | :-- | :-- |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Repository erstellt | - | [HWR Berlin: FSWB](https://hwrberlin.github.io/fswd/git.html) |
+| GitHub Pages erstellt | [Pages](https://paull2906.github.io/Musik-Quiz/) | [HWR Berlin: FSWB](https://hwrberlin.github.io/fswd/git.html)  |
+| 02-Data-Model entwickelt | [02-Data-Model](docs/02-data-model.md) | Gemini(Google) |
 
 ---
 
