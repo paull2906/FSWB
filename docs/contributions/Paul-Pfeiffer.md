@@ -72,6 +72,6 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 | #   | AI Tool | Purpose of Use | Affected Sections (Code + Docs) | Remarks, Procedure, Prompts |
 | :-- | :--     | :--            | :--                             | :--                         |
-| 01  |         |                |                                 |                             |
+| 01  | Gemini (Google)| Fehlerbehebung bei Markdown-Rendering-Fehlern im GitHub-Repository | Mermaid-Syntax in 02-Data-Models |Fehlerhafte Mermaid-Syntax-Fehlermeldung ("Expecting EOF, got ''") eingegeben. KI identifizierte fehlende Zeilenumbrüche und fälschlicherweise maskierte Backticks|
 | 02  |         |                |                                 |                             |
 | ... |         |                |                                 |                             |  
