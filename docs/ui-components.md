@@ -1,7 +1,7 @@
 ---
 title: UI Components
 nav_exclude: false
-nav_order: 99
+nav_order: 7
 ---
 
 {: .label .label-red }
