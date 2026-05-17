@@ -23,7 +23,11 @@ nav_order: 1
 
 ## Target User(s)
 
-[Scope your target user(s), e.g., with the help of personas.]
+LionRecords visiert eine sehr spezifische, aber auch weltweit relevante Gruppe an: 
+  - ## Menschen, für die Musik kein Hobby ist, sondern eine Identität
+Sie kennen nicht nut den Hit - sie kennen auch die vertrendenden Musiker, die Texte, die Geschichte dahinter und vieles Mehr.
+LionRecords möchte nicht nur eine "Musikquiz-App" sein, sondern diesen Personen eine Bühne bieten, um sich auszutauschen aber auch um sich zu duellieren. 
+  - Konkrete Beispiele könnte der Berliner sein, der jeden deutschen Rap-Release seit 1997 auswendig kennt, die Wienerin, die im Jazz-Forum moderiert oder auch der Discord-Server mit tauseden Mitgliedern, in dem "Underrated-Hits" oder allgemein Musik geteilt wird, die einen gerade interessiert. 
 
 ##  Happy Path
 
