@@ -1,6 +1,6 @@
 ---
 title: Product Discovery
-nav_order: 4
+nav_order: 5
 ---
 
 # Product Discovery
