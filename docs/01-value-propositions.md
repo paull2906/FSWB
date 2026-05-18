@@ -48,7 +48,21 @@ LionRecords möchte nicht nur eine "Musikquiz-App" sein, sondern diesen Personen
 
 ##  Happy Path
 
-[Illustrate the app "happy path", from the app's entry point to a completed task. You might want to show the path as (schematic) screen flows. Ensure that your "happy path" (a) is consistent with the Value Proposition, and (b) shows the features as implemented in the submitted web app.]
+### Happy Path A: Der Quizmaster
+# Ziel: Erstellung eines Nischen-Musik-Quizzes zur Steigerung der eigenen Sichtbarkeit.
+- Einstiegspunkt: Der Creator sieht, dass sein spezifisches Nischen-Genre noch unbesetzt ist (First-Moves-Anreiz)
+- Schritt 1: Klick auf "Create" und Anmeldung bei Spotify OAuth
+- Schritt 2: Nutzung der Spotify-Suchmaske. Creator fügt bis zu 15 Songs hinzu, benennt das Quiz, wählt das Genre und legt Schwierigkeitsgrad fest
+- Schritt 3: Testen ob alles so klappt wie er Möchte. Creator kann hier einstellen, dass die Ausschnitte 30s lang sind und es dann veröffentlichen.
+- Abschluss: Das Quiz ist live und für alle sichtbar. Der Creator sgteigt sofort auf den Platz 1 des Leaderboards und das Ergebnis wird gespeichert. Es entsteht nun den Anreiz den Creator besiegen zu wollen.
+
+### Happy Path B: Der Player
+# Ziel: Absolvieren eines Quizzes und Platzierung in der Community.
+- Der Spieler stöbert vorerst durch die Vorhandenen kategorien, kann diese gegebenenfalls auch filtern und wählt dann ein Quiz aus, um sich zu challengen.
+- Schritt 1: Klickt auf "Play" und meldet sich bei Spotify OAuth an, um den Punktestand dauerhaft zu speichern.
+- Schritt 2: Das Spiel läuft. Der Spieler hört nun 30s-Snippets, ein Punktesystem erlaubt es dem Spieler Punkte durch verschiedene richtige Angaben zu erhalten.
+- Schritt 3: Am Ende erscheint ein Gesamtscore und die Platzierung im Vergleich mit anderen Spielern. Durch einen geografischen Filter (z.B. "Berlin") könnte er einen lokalen Rang einsehen
+- Abschluss: Der Spieler kann jetzt sein Ergebnis und seine Platzierung durch einen Link in einem Discord Server teilen, wodruch ein kompetitiver Kreislauf mit Freunden und der Comunity entsteht.
 
 ---
 
