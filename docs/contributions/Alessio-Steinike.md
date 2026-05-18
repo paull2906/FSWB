@@ -3,6 +3,7 @@ title: Alessio-Steinike
 parent: Individual Contributions
 nav_order: 3
 --- 
+
 Alessio Steinike
 <details open markdown="block">
 <summary>Table of contents</summary>
@@ -10,6 +11,7 @@ Alessio Steinike
 {: toc }
 {: .text-delta }
 </details>
+
 ## Meta-Goals
 ### Target grade
 1,7
