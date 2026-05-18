@@ -28,7 +28,15 @@ Der Markt für Quize ist groß, aber falsch zugeschnitten. Das führt zu einem P
       
 ## Our Solution
 
-[Describe why and how your app solves the stated problem. Don't over-promise: the description should match what your app actually delivers.]
+LionRecords ist eine Web-Aplication, auf der Quizmaster eigene Audio-Quizze erstellen und Player diese Kompetitiv lösen können. Mit persistenten Ranglisgen Weltweil werden kompetitive Spieler gehalten, da sie den Drang haben sich und anderen etwas zu beweisen und durch gute Positionierung gut darzustehen.
+
+- Spotify API: 30s Audio Snippets
+- User-Generated Quiz-Pakete
+- Echtzeit-Scoring mit bewertung nach verschiedenen Kategorien
+- Geo-Leaderboards (Local oder auch Global)
+- Share-Link per Quiz-Ergebnis
+- Genre-Ranking für Creator
+- Responsive Web App
 
 ## Target User(s)
 
