@@ -12,7 +12,7 @@ nav_order: 1
 > You may delete this `attention` box.
 
 {: .no_toc }
-# Jane Dane
+# Leo Harnoth 
 
 <details open markdown="block">
 <summary>Table of contents</summary>
@@ -24,18 +24,17 @@ nav_order: 1
 ## Meta-Goals
 
 ### Target grade
-
-[State your target grade for this module. This is meant as a signal to your fellow team members.]
+1,3
 
 ### Personal goals
 
-[Spell out your personal goals regarding this Module, to create transparency among the team members.]
+Modellierungen technisch umsetzen; umfangreiche Ergebnisdokumentation
 
 ---
 
 ## Eidesstattliche Erklärung
 
-**[Jane Dane, Matrikelnr.: 1234567]**
+**Leo Harnoth, Matrikelnr.: 77208244796**
 
 Ich erkläre an Eides statt:
 
