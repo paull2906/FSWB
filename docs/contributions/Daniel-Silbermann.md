@@ -29,7 +29,7 @@ nav_order: 1
 
 ### Personal goals
 
-Meine Persönlichen Ziele in diesem Modul sind zu lernen wie man Web-Aplicationen erstellt und verwaltet. Ich möchte mein Wissen im Fron-End und Back-End vertiefen und möchte allgemein verstehen wie Web-Aplicationen aufgebaut werden unterhalten werden.
+Meine Persönlichen Ziele in diesem Modul sind zu lernen wie man Web-Aplicationen erstellt und verwaltet. Ich möchte mein Wissen im Fron-End und Back-End vertiefen und möchte allgemein verstehen wie Web-Aplicationen aufgebaut und unterhalten werden.
 
 ---
 
