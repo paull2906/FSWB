@@ -12,7 +12,7 @@ nav_order: 1
 > You may delete this `attention` box.
 
 {: .no_toc }
-# Jane Dane
+# Daniel Silbermann
 
 <details open markdown="block">
 <summary>Table of contents</summary>
@@ -25,17 +25,17 @@ nav_order: 1
 
 ### Target grade
 
-[State your target grade for this module. This is meant as a signal to your fellow team members.]
+1,7
 
 ### Personal goals
 
-[Spell out your personal goals regarding this Module, to create transparency among the team members.]
+Meine Persönlichen Ziele in diesem Modul sind zu lernen wie man Web-Aplicationen erstellt und verwaltet. Ich möchte mein Wissen im Fron-End und Back-End vertiefen und möchte allgemein verstehen wie Web-Aplicationen aufgebaut werden unterhalten werden.
 
 ---
 
 ## Eidesstattliche Erklärung
 
-**[Jane Dane, Matrikelnr.: 1234567]**
+**[Daniel Silbermann 77208682221]**
 
 Ich erkläre an Eides statt:
 
