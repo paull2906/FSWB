@@ -56,8 +56,8 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 ## Design Decisions that I led
 
-1. [DD #00](../design-decisions/dd-00.md)
-2. [DD #01](../design-decisions/dd-01.md)
+1. Kostenloser Zugang zu Beat the track - keine Paywall in Phase 1(../design-decisions/Kostenloser Zugang zu Beat the track - keine Paywall in Phase 1.md)
+
 
 ---
 
