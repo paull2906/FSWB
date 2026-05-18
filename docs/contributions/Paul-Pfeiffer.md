@@ -21,7 +21,9 @@ nav_order: 1
 
 ### Personal goals
 
-Sicherer Umgang mit APIs; Umsetzung einer App mit Frontend und Backend; Sicherer Umgang mit Creator-Views
++ Sicherer Umgang mit APIs
++ Umsetzung einer App mit Frontend und Backend
++ Sicherer Umgang in der Dokumentationen von (Programmier-)Projekten
 
 ---
 
