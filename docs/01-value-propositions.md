@@ -68,4 +68,20 @@ LionRecords möchte nicht nur eine "Musikquiz-App" sein, sondern diesen Personen
 
 ## Target Scope
 
-[Include your visual scoping of the web app (e.g., UI screens scribbles), as elaborated at start of the project as part of your Assignment.]
+### LionRecords Home-Discovery
+<img width="233" height="264" alt="LionRecords-Home:Discovery" src="https://github.com/user-attachments/assets/c9eaac87-e325-4704-b8df-ae95f956f498" />
+
+### LionRecords Game-Interface
+<img width="234" height="231" alt="LionRecords-Game_Interface" src="https://github.com/user-attachments/assets/5bc8e60c-1fbe-416e-8854-99cb5accec05" />
+
+### LionRecords Quiz-Leaderboard
+<img width="237" height="277" alt="LionRecords-Quiz_Leaderboard" src="https://github.com/user-attachments/assets/ad1dc2a6-085c-4297-a20b-0ad36ce933b5" />
+
+### LionRecords User-Profil
+<img width="235" height="276" alt="LionRecords-Creator_Profil" src="https://github.com/user-attachments/assets/f9c3b2a6-61a0-4f76-a704-b2e05721bff8" />
+
+### LionRecords Creator-Leaderboard
+<img width="233" height="280" alt="LionRecords-Creator_Leaderboard" src="https://github.com/user-attachments/assets/346b72c8-b370-4f18-86f8-9fd14c339d30" />
+
+### LionRecords Creator-Dashboard
+<img width="236" height="312" alt="LionRecords-Creator_Dashboard" src="https://github.com/user-attachments/assets/9302623d-8d85-4cc4-b04a-95b93a4fac8e" />
