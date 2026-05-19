@@ -84,7 +84,7 @@ Screens:
 3. Game Interface
 4. Leaderboard (Quiz)
 5. Creator-Profil
-6. Genre-Leaderboard
+6. Creator Leaderboard
 
 ### Technologie-Entscheidungen
 
