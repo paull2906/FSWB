@@ -72,13 +72,8 @@ Die Spotify Web API liefert 30-Sekunden-Snippets für jeden Song, sodass keine e
 
 ## [Raw Material]
 
-### Skizzen und Wireframes
+### Screens
 
-Die UI-Wireframes für alle sechs App-Screens wurden als Teil der Assignment-Dokumentation erstellt und sind dort eingebettet:
-
-- [Assignment Re-Work](../assignment.md) — Abschnitt 7: UI Scribbles
-
-Screens:
 1. Home / Discovery
 2. Quiz Creator Dashboard
 3. Game Interface
