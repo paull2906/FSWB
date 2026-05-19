@@ -80,6 +80,6 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 | #   | AI Tool | Purpose of Use | Affected Sections (Code + Docs) | Remarks, Procedure, Prompts |
 | :-- | :--     | :--            | :--                             | :--                         |
-| 01  |         |                |                                 |                             |
+| 01  |  Gemini - Image Generation       |  Visuelle Umsetzung und Verfeinerung unserer eigenen UI-Konzeptvorstellung              |  https://github.com/paull2906/Musik-Quiz/blob/main/docs/01-value-propositions.md#target-scope                               |  In erster Linie hatten wir bereits visuelle skizzen und erste Ideen gezeichnet und waren grob mit dem design zufrieden. Um diese Visualisierung besser und verständlicher darzustellen, gaben wir Gemini die Aufgabe unser bisheriges UI realistischer und veranschaulicher darzustellen. Durch einen interativen Prozess und gezieltes Feedback, ergab sich dann schrittweise das gewünschte und fertige UI.                            |
 | 02  |         |                |                                 |                             |
 | ... |         |                |                                 |                             |
