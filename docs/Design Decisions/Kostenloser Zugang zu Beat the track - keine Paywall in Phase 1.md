@@ -1,10 +1,10 @@
 ---
-title: Kostenloser Zugang zu Beat the track - keine Paywall in Phase 1
+title: Kostenloser Zugang zu LionRecords - keine Paywall in Phase 1
 parent: Design Decisions
 ---
 
 {: .no_toc }
-# Kostenloser Zugang zu Beat the track - keine Paywall in Phase 1
+# Kostenloser Zugang zu LionRecords - keine Paywall in Phase 1
 
 ## Meta
 
@@ -16,11 +16,11 @@ Updated
 
 ## Problem Statement
 
-Da Beat the track eine zweiseitige Plattform ist, benötigt sie das Zusammenspiel zweier Nutzergruppen: Creator und Player. Beide Seiten sind voneinander abhängig, denn ohne genug Player gibt es keine Motivation für Creator, Quizze zu erstellen und ohne genug Creator-Content gibt es nichts zu spielen. Wir befürchten, dass wir mit einer Paywall die Adoptionsschwelle erhöhen würden und riskieren könnten, dass weder genug Creator noch Player in ausreichender Zahl beitreten. Damit könnte die Plattform keinen Wert generieren, bevor sie überhaupt gestartet ist.
+Da LionRecords eine zweiseitige Plattform ist, benötigt sie das Zusammenspiel zweier Nutzergruppen: Creator und Player. Beide Seiten sind voneinander abhängig, denn ohne genug Player gibt es keine Motivation für Creator, Quizze zu erstellen und ohne genug Creator-Content gibt es nichts zu spielen. Wir befürchten, dass wir mit einer Paywall die Adoptionsschwelle erhöhen würden und riskieren könnten, dass weder genug Creator noch Player in ausreichender Zahl beitreten. Damit könnte die Plattform keinen Wert generieren, bevor sie überhaupt gestartet ist.
 
 ## Decision
 
-Beat the track wird in Phase 1 vollständig kostenlos und ohne Paywall angeboten. Alle Kernfunktionen, Quiz spielen, Quiz erstellen, Leaderboards einsehen, Creator-Profil aufbauen, sind ohne Bezahlung zugänglich. Monetarisierung und Premium-Features sind explizit als Out-of-Scope für Phase 1 definiert und auf Phase 2 verschoben. Diese Entscheidung wurde gemeinsam vom Team getroffen 
+LionRecords wird in Phase 1 vollständig kostenlos und ohne Paywall angeboten. Alle Kernfunktionen, Quiz spielen, Quiz erstellen, Leaderboards einsehen, Creator-Profil aufbauen, sind ohne Bezahlung zugänglich. Monetarisierung und Premium-Features sind explizit als Out-of-Scope für Phase 1 definiert und auf Phase 2 verschoben. Diese Entscheidung wurde gemeinsam vom Team getroffen 
 
 ## Regarded Options
 
