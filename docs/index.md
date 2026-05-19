@@ -4,9 +4,9 @@ nav_order: 0
 ---
 
 
-# Musik-Quiz "Beat the track"
+# Musik-Quiz "LionRecords"
 
-[Include a short project description. Below, include a representative, attractive screenshot of your final web app.]
+LionRecords ist eine webbasierte, zweiseitige Plattform für Musik-Enthusiasten. „Quizmaster“ erstellen via Spotify-API eigene Audio-Quizze, die „Player“ kompetitiv unter Zeitdruck anhand von 30-Sekunden-Snippets lösen, um in regionalen bis globalen Leaderboards aufzusteigen. Ein Gamification-System aus Badges und Rankings sorgt für starke Netzwerkeffekte und motiviert beide Seiten.
 
 ## Sample App Screen
 
