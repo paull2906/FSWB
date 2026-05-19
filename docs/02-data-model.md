@@ -103,6 +103,7 @@ erDiagram
 #### 2. Relationen
 * **User to Quiz_Session (1:N):** Ein User kann viele Quiz-Sessions spielen, aber eine Session gehört immer exakt zu einem User
 * **Quiz_Session to Quiz_Answer (1:N):** Eine Quiz-Session besteht aus mehreren beantworteten Fragen
+* **Quiz to Quiz_Session (1:N):** Zu jedem Quiz können Quiz-session entstehen
 * **User to Quiz (1:N):** Ein User kann als "Creator" mehrere Quizze erstellen
 * **Quiz to Leaderboard (1:N):** Pro Quiz kann es mehrere Einträge im Leaderboard geben
 * **User to Leaderboard (1:N):** Ein User kann in mehreren Leaderboards gelistet sein
