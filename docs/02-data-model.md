@@ -62,6 +62,7 @@ erDiagram
 
   LEADERBOARD {
         int ranking_position
+        int leaderboard_id PK
         int user_id FK
         int quiz_id FK
         int score
