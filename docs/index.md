@@ -10,7 +10,7 @@ LionRecords ist eine webbasierte, zweiseitige Plattform für Musik-Enthusiasten.
 
 ## Sample App Screen
 
-![attractive app screenshot](assets/images/fswd-intro_00.png)
+
 
 ---
 
