@@ -35,7 +35,7 @@ Meine Persönlichen Ziele in diesem Modul sind zu lernen wie man Web-Aplicatione
 
 ## Eidesstattliche Erklärung
 
-**[Daniel Silbermann 77208682221]**
+**Daniel Silbermann 77208682221**
 
 Ich erkläre an Eides statt:
 
