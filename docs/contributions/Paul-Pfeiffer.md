@@ -61,7 +61,7 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 | :-- | :-- | :-- |
 | Repository erstellt | - | [HWR Berlin: FSWB](https://hwrberlin.github.io/fswd/git.html) |
 | GitHub Pages erstellt | [Pages](https://paull2906.github.io/Musik-Quiz/) | [HWR Berlin: FSWB](https://hwrberlin.github.io/fswd/git.html)  |
-| 02-Data-Model entwickelt | [02-Data-Model](docs/02-data-model.md) | Gemini(Google) |
+| 02-Data-Model entwickelt | [02-Data-Model](docs/02-data-model.md) | Gemini(Google) (1) |
 
 ---
 
@@ -71,6 +71,6 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 | #   | AI Tool | Purpose of Use | Affected Sections (Code + Docs) | Remarks, Procedure, Prompts |
 | :-- | :--     | :--            | :--                             | :--                         |
-| 01  | Gemini (Google)| Fehlerbehebung bei Markdown-Rendering-Fehlern im GitHub-Repository | Mermaid-Syntax in 02-Data-Models |Fehlerhafte Mermaid-Syntax-Fehlermeldung ("Expecting EOF, got ''") eingegeben. KI identifizierte fehlende Zeilenumbrüche und fälschlicherweise maskierte Backticks|
+| 01  | Gemini (Google) (1)| Fehlerbehebung bei Markdown-Rendering-Fehlern im GitHub-Repository | Mermaid-Syntax in 02-Data-Models |Fehlerhafte Mermaid-Syntax-Fehlermeldung ("Expecting EOF, got ''") eingegeben. KI identifizierte fehlende Zeilenumbrüche und fälschlicherweise maskierte Backticks|
 | 02  |         |                |                                 |                             |
 | ... |         |                |                                 |                             |  
