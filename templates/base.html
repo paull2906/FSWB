@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block TITLE %}Beat-The-Track{% endblock %}</title>
+    <link href="{{ url_for('static', filename='css/quartz-bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body class="{% block BODY_CLASS %}bg-light min-vh-100{% endblock %}">
+    <header class="{% block HEADER_CLASS %}{% endblock %}">
+        {% block HEADER %}
+        {% endblock %}
+    </header>
+
+    <main class="{% block MAIN_CLASS %}{% endblock %}">
+        {% block CONTENT %}
+        {% endblock %}
+    </main>
+
+    {% block SCRIPTS %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    {% endblock %}
+</body>
+</html>

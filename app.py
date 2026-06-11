@@ -22,5 +22,18 @@ def about():
 def register():
     return render_template("register.html")
 
+
+
+
+@app.errorhandler(404)
+def http_not_found(e):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def http_internal_server_error(e):
+    return render_template('500.html'), 500
+
 if __name__ == "__main__":
     app.run(debug=True)
+
+
