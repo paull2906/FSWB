@@ -3,7 +3,7 @@ title: SQLAlchemy
 parent: Design Decisions
 ---
 {: .no_toc }
-# 00: Datenbankzugriff – SQL vs. SQLAlchemy
+# Datenbankzugriff – SQL vs. SQLAlchemy
 
 ## Meta
 
