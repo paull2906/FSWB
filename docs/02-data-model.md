@@ -31,11 +31,9 @@ erDiagram
     USER {
         int user_id PK
         string username
-        string email
         boolean is_admin
         string password_hash
-        datetime created_at
-    }
+        }
 
     QUIZ {
         int quiz_id PK
@@ -51,9 +49,6 @@ erDiagram
         int quiz_id FK
         int user_id FK
         int score
-        int total_questions
-        datetime started_at
-        datetime finished_at
     }
 
     TRACK {
@@ -68,12 +63,11 @@ erDiagram
         string genre_name 
     }
 
+
     QUESTION {
         int question_id PK
-        string question_text
         string correct_title
         string correct_artist
-        int position
         int quiz_id FK
         int track_id FK
     }    

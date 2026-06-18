@@ -2,6 +2,8 @@ from pathlib import Path
 
 from flask import Flask, render_template
 
+from db import init_db
+
 BASE_DIR = Path(__file__).resolve().parent
 
 app = Flask(
@@ -9,6 +11,8 @@ app = Flask(
     template_folder=BASE_DIR / "templates",
     static_folder=BASE_DIR / "static",
 )
+app.config['DATABASE'] = str(BASE_DIR / 'instance' / 'musik_quiz.sqlite')
+init_db(app)
 
 @app.route("/")
 def index():
@@ -35,5 +39,4 @@ def http_internal_server_error(e):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
 

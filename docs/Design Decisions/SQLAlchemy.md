@@ -41,9 +41,9 @@ Verwendung von standardmäßigem SQL für die Verwaltung der Datenbank.
 
 | # | Pro | Contra |
 |---|-----|--------|
-| 1 | Die Abfragesprache wurde bereits intensiv im Kurs „Datenbanken" behandelt. | CRUD-Befehle erfordern viel manuelles Schreiben. |
-| 2 | CRUD-Befehle können sicher angewendet werden. | SQL-Code wird bei wachsender Komplexität schnell unübersichtlich. |
-| 3 | Die Logik hinter SQL ist tief verankert und muss nicht neu erlernt werden. | Das manuelle Aufschreiben aller notwendigen CRUD-Befehle nimmt erheblich Zeit in Anspruch. |
+| 1 | Die Abfragesprache wurde bereits intensiv im Kurs „Datenbanken" behandelt | CRUD-Befehle erfordern viel manuelles Schreiben |
+| 2 | CRUD-Befehle können sicher angewendet werden | SQL-Code wird bei wachsender Komplexität schnell unübersichtlich |
+| 3 | Die Logik hinter SQL ist tief verankert und muss nicht neu erlernt werden | Das manuelle Aufschreiben aller notwendigen CRUD-Befehle nimmt erheblich Zeit in Anspruch |
 
 ---
 
@@ -53,7 +53,7 @@ Verwendung von SQLAlchemy als ORM-Framework für die Verwaltung der Datenbank.
 
 | # | Pro | Contra |
 |---|-----|--------|
-| 1 | CRUD-Befehle müssen nicht manuell geschrieben werden. | SQLAlchemy ist keinem aus der Gruppe bekannt und muss neu erlernt werden. |
-| 2 | Modernerer Standard für Datenbankzugriff wird erlernt. | Das Einarbeiten nimmt anfänglich Zeit in Anspruch. |
-| 3 | SQLAlchemy spart langfristig Zeit bei der Entwicklung. | Die Fehleranfälligkeit ist initial erhöht, da keine Erfahrung mit SQLAlchemy vorhanden ist. |
-| 4 | Die Dokumentation von Herrn Eck steht als ausführliche Einführung zur Verfügung. | |
+| 1 | CRUD-Befehle müssen nicht manuell geschrieben werden | SQLAlchemy ist keinem aus der Gruppe bekannt und muss neu erlernt werden |
+| 2 | Modernerer Standard für Datenbankzugriff wird erlernt | Das Einarbeiten nimmt anfänglich Zeit in Anspruch |
+| 3 | SQLAlchemy spart langfristig Zeit bei der Entwicklung | Die Fehleranfälligkeit ist initial erhöht, da keine Erfahrung mit SQLAlchemy vorhanden ist |
+| 4 | Die Dokumentation von Herrn Eck steht als ausführliche Einführung zur Verfügung | |
