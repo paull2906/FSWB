@@ -62,6 +62,9 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 | Repository erstellt | - | [HWR Berlin: FSWB](https://hwrberlin.github.io/fswd/git.html) |
 | GitHub Pages erstellt | [Pages](https://paull2906.github.io/Musik-Quiz/) | [HWR Berlin: FSWB](https://hwrberlin.github.io/fswd/git.html)  |
 | 02-Data-Model entwickelt | [02-Data-Model](docs/02-data-model.md) | Gemini(Google) (1) |
+| Design Decision: SQLAlchemy| [Design Decision: SQLAlchemy.md](https://github.com/paull2906/Musik-Quiz/blob/e4638a46008706adf03c37b279eb9453c4071847/docs/Design%20Decisions/SQLAlchemy.md)| [HWR Berlin: FSWB](https://hwrberlin.github.io/fswd/git.html), Claude(1)|
+|db.py aufgebaut| [DB.py](https://paull2906.github.io/Musik-Quiz/db.py ) |  [HWR Berlin: FSWB](https://hwrberlin.github.io/fswd/git.html), [fswd-app](https://github.com/hwrberlin/fswd-app.git)|
+
 
 ---
 
@@ -71,6 +74,6 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 | #   | AI Tool | Purpose of Use | Affected Sections (Code + Docs) | Remarks, Procedure, Prompts |
 | :-- | :--     | :--            | :--                             | :--                         |
-| 01  | Gemini (Google) (1)| Fehlerbehebung bei Markdown-Rendering-Fehlern im GitHub-Repository | Mermaid-Syntax in 02-Data-Models |Fehlerhafte Mermaid-Syntax-Fehlermeldung ("Expecting EOF, got ''") eingegeben. KI identifizierte fehlende Zeilenumbrüche und fälschlicherweise maskierte Backticks|
-| 02  |         |                |                                 |                             |
-| ... |         |                |                                 |                             |  
+| 01  | Gemini (Google) (1)| Fehlerbehebung bei Markdown-Rendering-Fehlern im GitHub-Repository | Mermaid-Syntax in 02-Data-Models |Fehlerhafte Mermaid-Syntax-Fehlermeldung eingegeben. KI identifizierte fehlende Zeilenumbrüche und fälschlicherweise maskierte Backticks|
+| 02  |Claude|Inhalte für Genres.json erstellen|[genres.json](https://paull2906.github.io/Musik-Quiz/genres.json)|Claude erstellte eine Liste an Genre Namen mit passenden Subgenres|
+| 03 |Claude(1)|Gegenüberstellung SQLAlchemy und SQL zum Vergleich| [Design Decision: SQLAlchemy.md](https://github.com/paull2906/Musik-Quiz/blob/e4638a46008706adf03c37b279eb9453c4071847/docs/Design%20Decisions/SQLAlchemy.md), Indirekter Effekt auf [DB.py](https://paull2906.github.io/Musik-Quiz/db.py ), da es uns bei der Entscheidung unterstützt hat|Wir haben Claude genutzt um einen übersichtlichen Vergleich von SQL und SQAlchemy erstellen zu lassen, das unsere Entscheidung unterstützen sollte|  
