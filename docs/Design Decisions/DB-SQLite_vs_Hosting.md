@@ -37,7 +37,7 @@ Die App läuft weiterhin ausschließlich lokal Die Daten verbleiben lokal auf de
 
 ### Option B: Zu Hosting-Dienst wechseln
 
-Alle Daten werden online auf einer gehosteten Datenbank gespeichert. Somit sind erstellte Quizze für alle sichtbar und jeder kann sie spielen.
+Alle Daten werden online auf einer gehosteten Datenbank gespeichert. Somit sind erstellte Quizze für alle sichtbar und jeder kann sie spielen. Ein möglicher Hostinganbieter könnte PostgreSQL sein.
 
 | Pro | Contra |
 | --- | --- |
