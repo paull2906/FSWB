@@ -93,7 +93,7 @@ def init():
         insert_sample()
     click.echo('Database has been initialized.')
 
-    app.cli.add_command(init)
+app.cli.add_command(init)
 
 @click.command('import-genres')
 @click.argument('path')
