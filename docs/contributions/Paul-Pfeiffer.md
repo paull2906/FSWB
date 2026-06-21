@@ -51,7 +51,8 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 ## Design Decisions that I led
 
-1.
+1. SQLAlchemy
+2. Genre_logic
 
 ---
 
@@ -64,6 +65,7 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 | 02-Data-Model entwickelt | [02-Data-Model](docs/02-data-model.md) | Gemini(Google) (1) |
 | Design Decision: SQLAlchemy| [Design Decision: SQLAlchemy.md](https://github.com/paull2906/Musik-Quiz/blob/e4638a46008706adf03c37b279eb9453c4071847/docs/Design%20Decisions/SQLAlchemy.md)| [HWR Berlin: FSWB](https://hwrberlin.github.io/fswd/git.html), Claude(1)|
 |db.py aufgebaut| [DB.py](https://paull2906.github.io/Musik-Quiz/db.py ) |  [HWR Berlin: FSWB](https://hwrberlin.github.io/fswd/git.html), [fswd-app](https://github.com/hwrberlin/fswd-app.git)|
+| Design Decision: Genre_logic| [Design Desicion: Genre_logic](https://github.com/paull2906/Musik-Quiz/blob/0b8ee94f3185f22b1584854a77010cdaba15fef2/docs/Design%20Decisions/Genre_logic.md)| Feedback aus dem Peer-review |
 
 
 ---
