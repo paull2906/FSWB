@@ -26,12 +26,12 @@ Beat-The-Track ist eine Flask-basierte Web-App, in der User Musik-Quizze spielen
  
 ```
 Musik-Quiz/
-├── app.py            # Flask-App, Konfiguration (SECRET_KEY), Routen
-├── db.py             # SQLAlchemy-Modelle, init-db / import-genres CLI, Beispieldaten
-├── forms.py          # Flask-WTF Formulare (Register, Login, CreateQuiz)
+├── app.py            # Flask-App, Konfiguration, Routen
+├── db.py             # SQLAlchemy-Modelle, Beispieldaten
+├── forms.py          # Flask-WTF Formulare
 ├── requirements.txt  # Abhängigkeiten
-├── templates/        # Jinja2-Templates (z. B. quiz.html)
-└── static/           # CSS / JS
+├── templates/        # Jinja2-Templates 
+└── static/           # CSS / Bootstrap
 ```
 
 ## Installation und Start der App:
