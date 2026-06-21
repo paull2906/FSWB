@@ -16,100 +16,81 @@ nav_order: 3
 ```mermaid
 
 erDiagram
-    USER ||--o{ QUIZ_SESSION : plays
-    USER ||--o{ LEADERBOARD : appears_in
-    QUIZ ||--o{ QUIZ_SESSION : has
-    QUIZ_SESSION ||--o{ QUIZ_ANSWER: contains
+   
     USER ||--o{ QUIZ : creates
-    QUIZ ||--o{ LEADERBOARD : has
-    QUIZ ||--|{ QUESTION : contains
-    QUIZ ||--|| GENRE : based_on
-    TRACK ||--o{ QUESTION : based_on
-    QUESTION ||--o{ QUIZ_ANSWER : answered_by
+    USER ||--o{ SCORE : achieves
+    QUIZ ||--o{ SONG : contains
+    QUIZ ||--o{ SCORE : has
+    MAIN_GENRE ||--o{ SUBGENRE : has
+    MAIN_GENRE |o--o{ QUIZ : categorizes
+    SUBGENRE |o--o{ QUIZ : categorizes
     
     
     USER {
         int user_id PK
         string username
-        string email
         boolean is_admin
         string password_hash
-        datetime created_at
-    }
+        string city
+        }
 
     QUIZ {
         int quiz_id PK
-        string quiz_name
+        string title
         string description
-        string genre_id FK
-        int user_id FK
-        datetime created_at
+        int creator_id FK
+        int main_genre_id FK
+        int subgenre_id FK
+        string difficulty
       }
 
-    QUIZ_SESSION {
-        int session_id PK
+   
+    SONG {
+        int song_id PK
         int quiz_id FK
-        int user_id FK
-        int score
-        int total_questions
-        datetime started_at
-        datetime finished_at
-    }
-
-    TRACK {
-        int track_id PK
+        string itunes_id
         string title
+        string album
         string artist
         string preview_url
-    }
-
-    GENRE {
-        int genre_id PK
-        string genre_name 
-    }
-
-    QUESTION {
-        int question_id PK
-        string question_text
-        string correct_title
-        string correct_artist
+        string cover_url
         int position
-        int quiz_id FK
-        int track_id FK
-    }    
+    }
 
-  QUIZ_ANSWER {
-    int answer_id PK
-    int session_id FK
-    int question_id FK
-    string user_answer_title
-    string user_answer_artist
-    boolean title_correct
-    boolean artist_correct
-}
+    MAINGENRE {
+        int maingenre_id PK
+        string name 
+    }
+
+    SUBGENRE {
+        int id PK
+        string name
+        int main_genre_id FK
+    }
+
+    SCORE {
+        int id PK
+        int user_id FK
+        int quiz_id FK
+        int points
+    }
 ```
 
 #### 1. Entities und Attribute
 * **User:** Speichert die Account-Daten, sowie eine Authentifizierung (gehashte Passwörter)
-* **Quiz_Session:** Protokolliert jedes gespielte Spiel eines Nutzers mit dem finalen Score, um Highscores für das Leaderboard zu berechnen
-* **Quiz_Answer:** Speichert die Antwort des Titels und Interpreten zu jeder einzelnen Frage innerhalb einer Session
-* **Quiz:** Speichert die von Creatoren erstellten Quiz-Pakete mit Bezug zu einem Genre
-* **Genre:** Enthält alle gängigen Genres als Liste um sie für die Quizbeschreibung zu nutzen
-* **Leaderboard:** Speichert absteigend die User mit den höchsten Punktzahlen für ein bestimmtes Quiz
-* **Question:** verknüpft einen Quiz-Eintrag mit einem Track. Das Feld question_type ermöglicht spätere Erweiterungen ohne Schemaänderung. position steuert die Reihenfolge der Fragen
-* **Track:** Der Track speichert ausschließlich die spotify_track_id. Titel, Cover-Art und Audio-Preview werden zur Laufzeit live via Spotipy bezogen
+* **Quiz:** Speichert die von Creatoren erstellten Quiz-Pakete mit Bezug zu einem Genre und dem Schwierigkeitslevel
+* **Maingenre:** Enthält alle gängigen Oberkategorien als Liste um sie für die Quizbeschreibung zu nutzen
+* **Subgenre:** Enthält spezifische Musikrichtungen als Unterkategorie des Maingenres
+* **Score:** Speichert absteigend die User mit den höchsten Punktzahlen für ein bestimmtes Quiz
+* **Song:** Der Song enthält alle Daten, die für die API mit Itunes notwendig sind, sowie die 30-Sekunden Vorschau und die Position der Songs im Quiz
 
 
 #### 2. Relationen
-* **User to Quiz_Session (1:N):** Ein User kann viele Quiz-Sessions spielen, aber eine Session gehört immer exakt zu einem User
-* **Quiz_Session to Quiz_Answer (1:N):** In einer Quiz-Session können beliebig viele Antworten zum Titel und Interpreten des Songs abgeschickt werden
-* **Quiz to Quiz_Session (1:N):** Zu jedem Quiz können Quiz-session entstehen
-* **User to Quiz (1:N):** Ein User kann als "Creator" mehrere Quizze erstellen
-* **Quiz to Leaderboard (1:N):** Pro Quiz kann es mehrere Einträge im Leaderboard geben
-* **User to Leaderboard (1:N):** Ein User kann in mehreren Leaderboards gelistet sein
-* **Track to Question (1:N):** Ein Track kann in mehreren Fragen vorkommen
-* **Question to Quiz_Answer(1:N):** Eine Question kann mehrere Quiz_Answers zum Titel und Interpreten enthalten
-* **Quiz to Question (1:N):** Ein Quiz muss mindestens eine Question enthalten
-* **Quiz to Genre (1:1):** Ein Quiz ist immer an ein Genre gebunden
-
+* **User to Quiz (1:N):** Ein User kann als "Creator" mehrere Quizze erstellen. jedes Quiz gehört über `creator_id` immer genau einem User
+* **Quiz to Score (1:N):** u jedem Quiz können viele Scores entstehen, jeder Score bezieht sich auf genau ein Quiz
+* **Quiz to Song (1:N):** Ein Quiz enthält mehrere Songs, sortiert über das Feld `position`; jeder Song gehört zu genau einem Quiz
+* **User to Score (1:N):** Ein User kann viele Scores erzielen, jeder Score gehört zu genau einem User
+* **MainGenre to Subgenre (1:N):** Ein Hauptgenre kann mehrere Subgenres haben; jedes Subgenre gehört zu genau einem Hauptgenre
+* **MainGenre to Quiz (1:N, optional):** Ein Quiz kann einem Hauptgenre zugeordnet sein
+* **Subgenre to Quiz (1:N, optional):** Ein Quiz kann einem Subgenre zugeordnet sein
 
