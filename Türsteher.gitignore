@@ -1,19 +1,11 @@
-# Ignore __pycache__ folder (precompiled Python code)
+# Ignore __pycache__ folder 
 __pycache__/
 
-# Ignore venv folder (Python Virtual Environment)
+# Ignore venv folder 
 venv/
 
-# Optional: ignore instance folder (used by Flask web app, e.g., for SQLite database)
+# ignore instance folder 
 instance/
 
-# --- Wichtig für Paul (Mac & Security) ---
+# Mac & Security
 .DS_Store
-.env
-
-
-
-        s_pfeiffer24@hwr-berlin.de
-
-git config --global user.email "s_pfeiffer24@hwr-berlin.de"
-git config --global user.name "paull2906"
