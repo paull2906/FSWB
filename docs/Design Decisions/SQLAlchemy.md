@@ -17,7 +17,7 @@ Updated
 
 ## Problem Statement
 
-Die zu treffende Entscheidung betrifft die Wahl der Methode für die Verwaltung der Datenbank. Zur Auswahl stehen reguläres SQL und SQLAlchemy. SQLAlchemy ist ein sogeganntes ORM-Framework (Object Relational Mapper), das es ermöglicht, Daten aus der Datenbank ohne direkte CRUD-Befehle zu verwalten.
+Die zu treffende Entscheidung betrifft die Wahl der Methode für die Verwaltung der Datenbank. Zur Auswahl stehen reguläres SQL und SQLAlchemy. SQLAlchemy ist ein sogenanntes ORM-Framework (Object Relational Mapper), das es ermöglicht, Daten aus der Datenbank ohne direkte CRUD-Befehle zu verwalten.
 
 SQLAlchemy kann den Umgang mit der Datenbank erleichtern und die Übersichtlichkeit im Code verbessern. Allerdings hat bisher niemand aus der Gruppe SQLAlchemy eingesetzt, weshalb ein Einarbeiten notwendig wäre. SQL hingegen wurde bereits mehrfach in Modulen des Studiums behandelt.
 
@@ -29,7 +29,7 @@ In der App wird SQLAlchemy genutzt. Zum einen, um das Framework kennenzulernen u
 
 Die von Herrn Eck bereitgestellte Dokumentation zu SQLAlchemy hat die Entscheidung maßgeblich beeinflusst: Sie konnte alle wichtigen Fragen und Unklarheiten klären, die sonst aufwändig hätten recherchiert werden müssen. Dies war eine wesentliche Hilfe und der ausschlaggebende Punkt für die Entscheidung zugunsten von SQLAlchemy.
 
-Da die Initialisierung und Verwaltung der Datenbank Paul Pfeiffer zugeordnet worden ist, trägt er auch die Verantwortung für diese Entscheidung. An der Abwägung und Diskussion war jedoch das gesamte Team beteiligt.
+Da die Initialisierung und Verwaltung der Datenbank Paul Pfeiffer zugeordnet worden sind, trägt er auch die Verantwortung für diese Entscheidung. An der Abwägung und Diskussion war jedoch das gesamte Team beteiligt.
 
 ---
 
