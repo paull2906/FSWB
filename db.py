@@ -162,10 +162,10 @@ def insert_sample():
 
     # Create sample songs
     songs = [
-        Song(quiz_id=quiz1.id, itunes_id='0', title='Strobe', artist='Deadmau5', album='For Lack of a Better Name', position=1),
-        Song(quiz_id=quiz1.id, itunes_id='0', title='Stayin Alive', artist='Boys Noize', album='Oi Oi Oi', position=2),
-        Song(quiz_id=quiz2.id, itunes_id='0', title='Take Five', artist='Dave Brubeck', album='Time Out', position=1),
-        Song(quiz_id=quiz2.id, itunes_id='0', title='Fly Me to the Moon', artist='Frank Sinatra', album='It Might as Well Be Swing', position=2),
+        Song(quiz_id=quiz1.id, itunes_id='1813489559', title='Strobe', artist='Deadmau5', album='For Lack of a Better Name', position=1, preview_url='https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/11/92/1b/11921b51-1ed8-ecf1-cb92-41c7af1e2942/mzaf_7176793560074956543.plus.aac.p.m4a'),
+        Song(quiz_id=quiz1.id, itunes_id='1290533939', title='Stayin Alive', artist='Boys Noize', album='Oi Oi Oi', position=2, preview_url='https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/80/9d/fe/809dfe6a-33b0-2d1b-e700-51d73a097f2d/mzaf_3710722148475037158.plus.aac.p.m4a'),
+        Song(quiz_id=quiz2.id, itunes_id='157427932', title='Take Five', artist='Dave Brubeck', album='Time Out', position=1, preview_url='https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/cc/49/99/cc4999b7-b550-cf81-af69-a4c63475fc71/mzaf_10897310118931669841.plus.aac.p.m4a'),
+        Song(quiz_id=quiz2.id, itunes_id='1440858129', title='Fly Me to the Moon', artist='Frank Sinatra', album='It Might as Well Be Swing', position=2, preview_url='https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/88/30/08/8830086e-a020-d902-6c9f-90dfeec6e1d4/mzaf_14335189078733210073.plus.aac.p.m4a'),
     ]
 
     # Create sample scores
