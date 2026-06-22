@@ -1,13 +1,13 @@
 from pathlib import Path
-from flask import Flask, render_template, redirext, url_for, request, flash
+from flask import Flask, render_template, redirect, url_for, request, flash
 import forms
-from db import db, User, Quiz, Song, MainGenre, Subgenre, Score
-
 app = Flask(__name__)
 
 app.config.from_mapping(
     SECRET_KEY='secret_key_just_for_dev_environment'
 )
+
+from db import db, User, Quiz, Song, MainGenre, Subgenre, Score
 
 @app.route("/")
 def index():
