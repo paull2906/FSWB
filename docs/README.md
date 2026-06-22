@@ -44,6 +44,6 @@ Musik-Quiz/
 #3. Requirements in die virtuelle Umgebung laden
    pip install -r requirements.txt
 #4. Web App starten
-   python app.py  
+   flask run --debug
 ```
 
