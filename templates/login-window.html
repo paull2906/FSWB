@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block TITLE %} Login - LiveRecords {% endblock %}
+{% block BODY_CLASS %} bg-light d-flex align-items-center justify-content-center vh-100 {% endblock %}
+{% block MAIN_CLASS %} w-100 {% endblock %}
+
+{% block CONTENT %}
+
+<body
+style="background-color:aliceblue !important; background-image:none !important">
+</body>
+
+<link href = "https://bootswatch.com/_vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class = "container">
+    <div class = "row justify-content-center">
+        <div class = "col-12 col-sm-8 col-md-6 col-lg-4">
+            <div class = "card shadow-sm border-0 px-3 py-4">
+                
+                <div class = "card-body">
+                    <h3 class = "card-title text-center mb-3 fw-bold">Anmelden</h3>
+                        
+                        <form action="/login" method="post">
+                            <div class = "mb-3">
+                                <label for = "email" class = "form-label small fw-semibold">E-Mail</label>
+                                <input type = "email" class = "form-index form-control form-control-lg" id="email" name="username" placeholder="name@beispiel.de" required>
+                            </div>
+                            
+                            <div class = "mb-3">
+                                <div class = "d-flex justify-content-between">
+                                    <label for = "password" class="form-label small fw-semibold">Passwort</label>
+                                    <a href="#" class = "small text-primary">Vergessen?</a>
+                                </div>
+                                <input type = "password" class = "form-control form-control-lg" id="password" name="password" placeholder="******" required>
+                            </div>  
+                            <button style="background-color:blue" type="submit" class = "btn btn-primary btn-lg w-100 fw-semibold mb-4">Anmelden</button>
+                        </form>
+
+                        <div class = "text-center mb-3">
+                            <p> Noch kein Konto? <a href = "{{ url_for('register')}}" class = "fw-semibold text-primary">Registrieren</a></p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+                    
+                            
