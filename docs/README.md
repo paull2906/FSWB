@@ -43,7 +43,9 @@ Musik-Quiz/
    source venv/bin/activate      #windows: venv\Scripts\activate
 #3. Requirements in die virtuelle Umgebung laden
    pip install -r requirements.txt
-#4. Web App starten
+#4  Datenbank initialisieren
+   flask --app app init-db
+#5. Web App starten
    flask run --debug
 ```
 
