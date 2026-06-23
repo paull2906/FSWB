@@ -44,9 +44,9 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 | \# | My contribution | Why I am proud of it | Which challenge I overcame |
 | :-- | :-- | :-- | :-- |
-| 1 | [Describe your individual contribution] |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
+| 1 | Login Fenster erstellt | Ich habe hier die Freiheit genossen selber entscheiden zu können was genau ich rein machen möchte und wie das fenster aussehen  soll. Vor alem Die möglichkeit Designtechnisch da freiheiten zu haben, hat mir sehr gefallen. Am Ende sieht es auch gut aus. | Die Challenge die ich überschritten habe war, dass der primary button nicht geklappt hat und ich diesen dann neu erstellen musste |
+| 2 | Register Fenster erstellt | Auch hier hatte ich die Möglichkeit frei zu entscheiden. Zu erst hatte ich das Anmeldescreen erstellt. Worauf ich stolz bin ist, dass das Registrieren Fenster genau so aussieht wie das Anmeldefenster | Durch Mehr optionen bei der Registrierung ist die Karte länger geworden. Eine Challenge war es also, dass die Karte dennoch so central central aussieht wie beim Anmeldescreen. Das habe ich geschafft |
+| 3 | Erstellung von der Forms.py | In der Vorlesung habe ich WTForms nicht ganz verstanden, fand es aber grundsätzlich interessant und auch für unser Projekt sinnhaft. Ich bin daher stolz darauf, dass ich es am Ende dennoch geschafft habe zu verstehen und sogar das Dokument zu erstellen. | Ich musste mir das komplett neu aneignen und verstehen was genau benötigt wird und wie ich an das Komme, was ich benötige. Am ende habe ich es verstanden |
 
 ## Design Decisions that I led
 
