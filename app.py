@@ -37,9 +37,37 @@ def index():
 def about():
     return "This is a Music Quiz App!"
 
-@app.route("/register")
+@app.route('/register', methods=['GET', 'POST'])
 def register():
-    return render_template("register-window.html")
+    form = forms.RegisterForm()
+    
+    if form.validate_on_submit():
+        username = form.username.data.strip()
+        password = form.password.data
+        city = form.city.data.strip() if hasattr(form, 'city') and form.city.data else None
+        
+        existing_user = db.session.execute(
+            db.select(User).filter_by(username=username)
+        ).scalars().first()
+        
+        if existing_user:
+            flash('Dieser Benutzername ist bereits vergeben.', 'warning')
+            return render_template('register-window.html', form=form)
+            
+        new_user = User(
+            username=username,
+            password_hash=hash_password(password),
+            city=city,
+            is_admin=False 
+        )
+        
+        db.session.add(new_user)
+        db.session.commit()
+        
+        flash('Konto erfolgreich erstellt! Du kannst dich jetzt anmelden.', 'success')
+        return redirect(url_for('login'))
+        
+    return render_template('register-window.html', form=form)
     
 @app.route('/quiz/create', methods=['GET', 'POST'])
 def create_quiz():
@@ -72,18 +100,24 @@ def create_quiz():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
-        username = request.form.get('username', '').strip()
-        password = request.form.get('password', '')
+    form = forms.LoginForm()
+    
+    if form.validate_on_submit():
+        username = form.username.data.strip()
+        password = form.password.data
+
         u = db.session.execute(
             db.select(User).filter_by(username=username)
         ).scalars().first()
+        
         if u and u.password_hash == hash_password(password):
             session['user'] = {'id': u.id, 'username': u.username, 'is_admin': u.is_admin, 'city': u.city}
             flash(f'Willkommen zurück, {u.username}!', 'success')
-            return redirect(url_for('index'))
+            return redirect(url_for('browse')) 
+            
         flash('Ungültiger Benutzername oder Passwort.', 'danger')
-    return render_template('login.html')
+        
+    return render_template('login-window.html', form=form)
 
 
 @app.route('/logout')
