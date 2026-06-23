@@ -78,4 +78,4 @@ Es existiert keine Plattform, die Erstellung und Konsum von Audio-Quizzen im Nis
 | SongPop | ✅ | ❌ | ✅ | ❌ |
 | Kahoot | ❌ | ✅ | ❌ | ❌ |
 | Google Forms | ❌ | ✅ | ❌ | ❌ |
-| **LionRecords** | **✅** | **✅** | **✅** | **✅** |
+| **LiveRecords** | **✅** | **✅** | **✅** | **✅** |
