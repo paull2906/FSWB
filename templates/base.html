@@ -37,12 +37,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('browse') }}">Browse</a>
                     </li>
-                    {% if user and user.role in ['creator', 'admin'] %}
+                    {% if user %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('create') }}">Quiz erstellen</a>
                     </li>
                     {% endif %}
-                    {% if user and user.role == 'admin' %}
+                    {% if user and user.is_admin %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('admin') }}">Admin</a>
                     </li>
@@ -52,12 +52,10 @@
                     {% if user %}
                     <li class="nav-item d-flex align-items-center me-2">
                         <span class="navbar-text text-light me-2">{{ user.username }}</span>
-                        {% if user.role == 'admin' %}
-                        <span class="badge bg-danger">{{ user.role }}</span>
-                        {% elif user.role == 'creator' %}
-                        <span class="badge bg-primary">{{ user.role }}</span>
+                        {% if user.is_admin %}
+                        <span class="badge bg-danger">admin</span>                       
                         {% else %}
-                        <span class="badge bg-secondary">{{ user.role }}</span>
+                        <span class="badge bg-secondary">player</span>
                         {% endif %}
                     </li>
                     <li class="nav-item">
