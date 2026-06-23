@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}{{ quiz.title }} – Spielen{% endblock %}
+{% block content %}
+<h2 class="mb-1"><i class="bi bi-controller"></i> {{ quiz.title }}</h2>
+<p class="text-muted mb-4">
+    <span class="badge bg-info text-dark">{{ quiz.genre }}</span>
+    {% if quiz.difficulty == 'easy' %}
+    <span class="badge bg-success">Leicht</span>
+    {% elif quiz.difficulty == 'hard' %}
+    <span class="badge bg-danger">Schwer</span>
+    {% else %}
+    <span class="badge bg-warning text-dark">Mittel</span>
+    {% endif %}
+</p>
+
+<form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    {% for song in quiz.songs %}
+    <div class="card p-3 mb-3">
+        <div class="row align-items-center g-3">
+            <div class="col-auto">
+                <div class="song-number">{{ loop.index }}</div>
+            </div>
+            {% if song.cover_url %}
+            <div class="col-auto">
+                <img src="{{ song.cover_url }}" alt="" width="64" height="64" class="rounded">
+            </div>
+            {% endif %}
+            <div class="col-md-3">
+                {% if song.preview_url %}
+                <audio controls src="{{ song.preview_url }}" class="w-100"></audio>
+                {% else %}
+                <div class="d-flex align-items-center gap-2 text-warning p-2 bg-warning-subtle rounded">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    <span class="small">Keine Vorschau verfügbar</span>
+                </div>
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="title_{{ song.id }}" placeholder="Songtitel raten...">
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="artist_{{ song.id }}" placeholder="Künstler raten...">
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <p class="text-muted small">
+        <i class="bi bi-info-circle"></i> Richtiger Titel = 100 Punkte, richtiger Künstler = 50 Punkte pro Song.
+    </p>
+
+    <button type="submit" class="btn btn-primary btn-lg">
+        <i class="bi bi-send"></i> Antworten abgeben
+    </button>
+</form>
+{% endblock %}
