@@ -3,6 +3,7 @@ import json
 import click
 from flask_sqlalchemy import SQLAlchemy
 from app import app
+from itunes import search_tracks, format_track
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///musikquiz.sqlite'
 
@@ -132,6 +133,22 @@ def import_genres_from_json(path):
     db.session.commit()
     return added_main, added_sub
 
+def fetch_song(url,quiz_id, position):
+        results = search_tracks(url, limit=1)
+        if not results:
+            return None
+        t= format_track(results[0])
+        return Song(
+            quiz_id=quiz_id,
+            itunes_id=t['itunes_id'],
+            title=t['title'],
+            artist=t['artist'],
+            album=t['album'],
+            preview_url=t['preview_url'],
+            cover_url=t['cover_url'],
+            position=position
+        )
+
 def insert_sample():
     # Delete all existing data, if any
     for model in [Score, Song, Quiz, Subgenre, MainGenre, User]:
@@ -160,12 +177,19 @@ def insert_sample():
     db.session.commit()
 
     # Create sample songs
-    songs = [
-        Song(quiz_id=quiz1.id, itunes_id='1813489559', title='Strobe', artist='Deadmau5', album='For Lack of a Better Name', position=1, preview_url='https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/11/92/1b/11921b51-1ed8-ecf1-cb92-41c7af1e2942/mzaf_7176793560074956543.plus.aac.p.m4a'),
-        Song(quiz_id=quiz1.id, itunes_id='1290533939', title='Stayin Alive', artist='Boys Noize', album='Oi Oi Oi', position=2, preview_url='https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/80/9d/fe/809dfe6a-33b0-2d1b-e700-51d73a097f2d/mzaf_3710722148475037158.plus.aac.p.m4a'),
-        Song(quiz_id=quiz2.id, itunes_id='157427932', title='Take Five', artist='Dave Brubeck', album='Time Out', position=1, preview_url='https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/cc/49/99/cc4999b7-b550-cf81-af69-a4c63475fc71/mzaf_10897310118931669841.plus.aac.p.m4a'),
-        Song(quiz_id=quiz2.id, itunes_id='1440858129', title='Fly Me to the Moon', artist='Frank Sinatra', album='It Might as Well Be Swing', position=2, preview_url='https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/88/30/08/8830086e-a020-d902-6c9f-90dfeec6e1d4/mzaf_14335189078733210073.plus.aac.p.m4a'),
+    
+    song_urls = [
+         ('Deadmau5 Strobe',            quiz1.id, 1),
+        ('Boys Noize Oi Oi Oi',        quiz1.id, 2),
+        ('Dave Brubeck Take Five',     quiz2.id, 1),
+        ('Frank Sinatra Fly Me to the Moon', quiz2.id, 2),
     ]
+    
+    songs = []
+    for url, quiz_id, position in song_urls:
+            song= fetch_song(url, quiz_id, position)
+            if song:
+                songs.append(song)
 
     # Create sample scores
     scores = [
