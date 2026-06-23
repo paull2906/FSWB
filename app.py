@@ -31,7 +31,7 @@ def get_session_user():
 
 @app.route("/")
 def index():
-    return render_template("login.html")
+    return render_template("login-window.html")
 
 @app.route("/about")
 def about():
@@ -39,7 +39,7 @@ def about():
 
 @app.route("/register")
 def register():
-    return render_template("register.html")
+    return render_template("register-window.html")
     
 @app.route('/quiz/create', methods=['GET', 'POST'])
 def create_quiz():
