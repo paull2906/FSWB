@@ -25,3 +25,27 @@
 audio {
     width: 100%;
 }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding: 1.5rem 2rem;
+    background-color:white;
+    border-top: 1px solid white;
+    font-size: 0.85rem;
+    color: black;
+}
+
+footer h5, footer h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    color: black;
+}
+
+footer p {
+    margin: 0;
+    color: black;
+}
