@@ -30,7 +30,8 @@ def get_session_user():
 
 @app.route("/")
 def index():
-    return render_template("login-window.html")
+    return redirect(url_for('login'))
+
 
 @app.route("/about")
 def about():
