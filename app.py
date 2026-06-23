@@ -190,7 +190,7 @@ def create():
             db.select(Subgenre).filter_by(main_genre_id=int(main_genre_id))
         ).scalars().all()
     else:
-    subgenres = []
+        subgenres = []
 
     return render_template('create.html', user=user, staged=staged,
                             search_results=search_results, search_query=search_query,
