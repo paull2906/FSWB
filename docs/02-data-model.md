@@ -21,8 +21,8 @@ erDiagram
     USER ||--o{ SCORE : achieves
     QUIZ ||--o{ SONG : contains
     QUIZ ||--o{ SCORE : has
-    MAIN_GENRE ||--o{ SUBGENRE : has
-    MAIN_GENRE |o--o{ QUIZ : categorizes
+    MAINGENRE ||--o{ SUBGENRE : has
+    MAINGENRE |o--o{ QUIZ : categorizes
     SUBGENRE |o--o{ QUIZ : categorizes
     
     
