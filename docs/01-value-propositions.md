@@ -24,11 +24,11 @@ Der Markt für Quize ist groß, aber falsch zugeschnitten. Das führt zu einem P
     - Anbieter wie Heardle, Youtube oder auch Spotify-interne Features fokussieren auch Songs, die in dem Moment oder vor kurzen sehr angesagt waren. Für jemanden, der sich 5 Jahre lang mit der Geschichte hinter den Songs auseinaner gesetzt hat, ist das dann quasi nicht wirklich betreffend und ansprechend.
       Darüber hinaus fehlt jede Form von persistentem Wettbewerb also ein langfristiger Wettbewerb, der nicht direkt nach dem Duell verschwindet. Und genau dadurch entsteht das Problem: Durch den fehlenden persistenten Wettbewerb entsteht kein Ehrgeiz sich langfristig zu duellieren und sich zu messen. Kein Leaderboard, kein Vergleich mit der lokalen Community, kein Link, den man in einem Chat teilen kann, der dann bedeutung hat.
   - ## Verbindende Marklücke
-    - Es existiert keine Plattform, die das Erstellen und den Konsum von Musik-Quizen im Nischen-Segment oder auch im Allseits bekannten Genre gut vereint - mit echter Spotify-Audio-Integration, Unser-Generated Content und einem Ranglisten-System, das über eine Spielrunde hinaus gespeichert wird und dadurch danna auch an Bedeutung gewinnt. LionsRecords schließt exakt diese Lücke.
+    - Es existiert keine Plattform, die das Erstellen und den Konsum von Musik-Quizen im Nischen-Segment oder auch im Allseits bekannten Genre gut vereint - mit echter Spotify-Audio-Integration, Unser-Generated Content und einem Ranglisten-System, das über eine Spielrunde hinaus gespeichert wird und dadurch danna auch an Bedeutung gewinnt. LivesRecords schließt exakt diese Lücke.
       
 # Our Solution
 
-LionRecords ist eine Web-Aplication, auf der Quizmaster eigene Audio-Quizze erstellen und Player diese Kompetitiv lösen können. Mit persistenten Ranglisgen Weltweil werden kompetitive Spieler gehalten, da sie den Drang haben sich und anderen etwas zu beweisen und durch gute Positionierung gut darzustehen.
+LiveRecords ist eine Web-Aplication, auf der Quizmaster eigene Audio-Quizze erstellen und Player diese Kompetitiv lösen können. Mit persistenten Ranglisgen Weltweil werden kompetitive Spieler gehalten, da sie den Drang haben sich und anderen etwas zu beweisen und durch gute Positionierung gut darzustehen.
 
 - Spotify API: 30s Audio Snippets
 - User-Generated Quiz-Pakete
@@ -40,10 +40,10 @@ LionRecords ist eine Web-Aplication, auf der Quizmaster eigene Audio-Quizze erst
 
 # Target User(s)
 
-LionRecords visiert eine sehr spezifische, aber auch weltweit relevante Gruppe an: 
+LiveRecords visiert eine sehr spezifische, aber auch weltweit relevante Gruppe an: 
   - ## Menschen, für die Musik kein Hobby ist, sondern eine Identität
 Sie kennen nicht nut den Hit - sie kennen auch die vertrendenden Musiker, die Texte, die Geschichte dahinter und vieles Mehr.
-LionRecords möchte nicht nur eine "Musikquiz-App" sein, sondern diesen Personen eine Bühne bieten, um sich auszutauschen aber auch um sich zu duellieren. 
+LiveRecords möchte nicht nur eine "Musikquiz-App" sein, sondern diesen Personen eine Bühne bieten, um sich auszutauschen aber auch um sich zu duellieren. 
   - Konkrete Beispiele könnte der Berliner sein, der jeden deutschen Rap-Release seit 1997 auswendig kennt, die Wienerin, die im Jazz-Forum moderiert oder auch der Discord-Server mit tauseden Mitgliedern, in dem "Underrated-Hits" oder allgemein Musik geteilt wird, die einen gerade interessiert. 
 
 #  Happy Path
@@ -68,20 +68,20 @@ LionRecords möchte nicht nur eine "Musikquiz-App" sein, sondern diesen Personen
 
 # Target Scope
 
-## LionRecords Home-Discovery
-<img width="233" height="264" alt="LionRecords-Home:Discovery" src="https://github.com/user-attachments/assets/c9eaac87-e325-4704-b8df-ae95f956f498" />
+## LiveRecords Home-Discovery
+<img width="233" height="264" alt="LiveRecords-Home:Discovery" src="https://github.com/user-attachments/assets/c9eaac87-e325-4704-b8df-ae95f956f498" />
 
-## LionRecords Game-Interface
-<img width="234" height="231" alt="LionRecords-Game_Interface" src="https://github.com/user-attachments/assets/5bc8e60c-1fbe-416e-8854-99cb5accec05" />
+## LiveRecords Game-Interface
+<img width="234" height="231" alt="LiveRecords-Game_Interface" src="https://github.com/user-attachments/assets/5bc8e60c-1fbe-416e-8854-99cb5accec05" />
 
-## LionRecords Quiz-Leaderboard
-<img width="237" height="277" alt="LionRecords-Quiz_Leaderboard" src="https://github.com/user-attachments/assets/ad1dc2a6-085c-4297-a20b-0ad36ce933b5" />
+## LiveRecords Quiz-Leaderboard
+<img width="237" height="277" alt="LiveRecords-Quiz_Leaderboard" src="https://github.com/user-attachments/assets/ad1dc2a6-085c-4297-a20b-0ad36ce933b5" />
 
-## LionRecords User-Profil
-<img width="235" height="276" alt="LionRecords-Creator_Profil" src="https://github.com/user-attachments/assets/f9c3b2a6-61a0-4f76-a704-b2e05721bff8" />
+## LiveRecords User-Profil
+<img width="235" height="276" alt="LiveRecords-Creator_Profil" src="https://github.com/user-attachments/assets/f9c3b2a6-61a0-4f76-a704-b2e05721bff8" />
 
-## LionRecords Creator-Leaderboard
-<img width="233" height="280" alt="LionRecords-Creator_Leaderboard" src="https://github.com/user-attachments/assets/346b72c8-b370-4f18-86f8-9fd14c339d30" />
+## LiveRecords Creator-Leaderboard
+<img width="233" height="280" alt="LiveRecords-Creator_Leaderboard" src="https://github.com/user-attachments/assets/346b72c8-b370-4f18-86f8-9fd14c339d30" />
 
-## LionRecords Creator-Dashboard
-<img width="236" height="312" alt="LionRecords-Creator_Dashboard" src="https://github.com/user-attachments/assets/9302623d-8d85-4cc4-b04a-95b93a4fac8e" />
+## LiveRecords Creator-Dashboard
+<img width="236" height="312" alt="LiveRecords-Creator_Dashboard" src="https://github.com/user-attachments/assets/9302623d-8d85-4cc4-b04a-95b93a4fac8e" />
