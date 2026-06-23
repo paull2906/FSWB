@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block title %}Quiz erstellen – Live Records{% endblock %}
+{% block content %}
+<h2 class="mb-4"><i class="bi bi-plus-circle"></i> Quiz erstellen</h2>
+
+<form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card p-3 mb-3">
+                <label class="form-label">Song-Suche (iTunes)</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="search_query" value="{{ search_query }}" placeholder="Künstler oder Titel...">
+                    <button type="submit" name="do_search" value="1" class="btn btn-primary">
+                        <i class="bi bi-search"></i> Suchen
+                    </button>
+                </div>
+            </div>
+
+            <div class="card p-3">
+                <h6 class="text-muted">Suchergebnisse</h6>
+                {% for r in search_results %}
+                <input type="hidden" name="res_id_{{ loop.index0 }}" value="{{ r.itunes_id }}">
+                <input type="hidden" name="res_title_{{ loop.index0 }}" value="{{ r.title }}">
+                <input type="hidden" name="res_artist_{{ loop.index0 }}" value="{{ r.artist }}">
+                <input type="hidden" name="res_album_{{ loop.index0 }}" value="{{ r.album }}">
+                <input type="hidden" name="res_preview_{{ loop.index0 }}" value="{{ r.preview_url }}">
+                <input type="hidden" name="res_cover_{{ loop.index0 }}" value="{{ r.cover_url }}">
+                <div class="d-flex align-items-center border rounded p-2 mb-2">
+                    {% if r.cover_url %}
+                    <img src="{{ r.cover_url }}" alt="" width="48" height="48" class="rounded me-2">
+                    {% endif %}
+                    <div class="flex-grow-1">
+                        <div class="fw-semibold">{{ r.title }}</div>
+                        <div class="small text-muted">{{ r.artist }} &middot; {{ r.album }}</div>
+                    </div>
+                    <button type="submit" name="add_idx" value="{{ loop.index0 }}" class="btn btn-sm btn-outline-success">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </div>
+                {% else %}
+                <p class="text-muted small mb-0">Noch keine Suche durchgeführt.</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card p-3 mb-3">
+                <div class="mb-3">
+                    <label class="form-label">Titel</label>
+                    <input type="text" class="form-control" name="title" value="{{ title }}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Genre</label>
+                    <input type="text" class="form-control" name="genre" value="{{ genre }}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Schwierigkeit</label>
+                    <select class="form-select" name="difficulty">
+                        <option value="easy" {{ 'selected' if difficulty == 'easy' }}>Leicht</option>
+                        <option value="medium" {{ 'selected' if difficulty == 'medium' }}>Mittel</option>
+                        <option value="hard" {{ 'selected' if difficulty == 'hard' }}>Schwer</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card p-3">
+                <h6 class="text-muted">Songs im Quiz ({{ staged|length }})</h6>
+                {% for s in staged %}
+                <div class="d-flex align-items-center border rounded p-2 mb-2">
+                    {% if s.cover_url %}
+                    <img src="{{ s.cover_url }}" alt="" width="48" height="48" class="rounded me-2">
+                    {% endif %}
+                    <div class="flex-grow-1">
+                        <div class="fw-semibold">{{ s.title }}</div>
+                        <div class="small text-muted">{{ s.artist }}</div>
+                    </div>
+                    <button type="submit" name="remove_idx" value="{{ loop.index0 }}" class="btn btn-sm btn-outline-danger">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                {% else %}
+                <p class="text-muted small mb-0">Noch keine Songs hinzugefügt.</p>
+                {% endfor %}
+
+                <button type="submit" name="do_save" value="1" class="btn btn-primary mt-2"
+                        {{ 'disabled' if staged|length < 2 }}>
+                    <i class="bi bi-cloud-upload"></i> Quiz veröffentlichen
+                </button>
+                {% if staged|length < 2 %}
+                <p class="small text-muted mt-2 mb-0">Mindestens 2 Songs erforderlich.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
