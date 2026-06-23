@@ -56,7 +56,7 @@ def register():
         new_user = User(
             username=username,
             password_hash=hash_password(password), 
-            city=None,
+            city=form.city.data.strip() if form.city.data else None,
             is_admin=False 
         )
         
