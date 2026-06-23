@@ -184,7 +184,13 @@ def create():
                 return redirect(url_for('browse'))
 
     main_genres = db.session.execute(db.select(MainGenre)).scalars().all()
-    subgenres = db.session.execute(db.select(Subgenre)).scalars().all()
+
+    if main_genre_id:
+    subgenres = db.session.execute(
+        db.select(Subgenre).filter_by(main_genre_id=int(main_genre_id))
+    ).scalars().all()
+    else:
+    subgenres = []
 
     return render_template('create.html', user=user, staged=staged,
                             search_results=search_results, search_query=search_query,
