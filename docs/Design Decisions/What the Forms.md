@@ -9,10 +9,10 @@ parent: Design Decisions
 ## Meta
 
 Status
-: **Work in progress**
+: **Decided**
 
 Updated
-: 17.06.2026
+: 23-June-2026
 ---
 ## Problem Statement
 
@@ -21,10 +21,12 @@ Die zu treffende Entscheidung betrifft die Wahl der Methode zur Verarbeitung und
 WTForms ermöglicht es, Formulare als Python-Klassen zu definieren und Validierungslogik zentral zu bündeln, ohne diese direkt im HTML oder in den Route-Funktionen implementieren zu müssen. Manuelle HTML-Formulare hingegen erfordern keine zusätzliche Bibliothek, da Eingaben direkt über "request.form" in Flask verarbeitet werden.
  
 WTForms ist keinem aus der Gruppe bisher bekannt und müsste neu erlernt werden. Manuelle HTML-Formulare wurden im Rahmen des Studiums bereits behandelt und sind der Gruppe vertraut. Da die Implementierung der Formulare Alessio Steinicke zugeordnet worden ist, trägt er auch die Verantwortung für diese Entscheidung. An der Abwägung und Diskussion ist jedoch das gesamte Team beteiligt.
+
 --- 
 ## Decision
 
-[Describe **which** design decision was taken for **what reason** and by **whom**.]
+Wir haben uns für einen Kompromiss entschieden. Da WTForms vor allem bei statischen Formularen sinnvoll ist, werden wir WTForms zum Login und zum Registrieren verwenden. Hier sind die Formulare besonders statisch und der Aufwand, WTForms nachvollziehbar zu implementieren, ist vergleichbar mit dem Nutzen von WTForms in diesem Teil. Für alle anderen Formulare verwenden wir standardmäßige HTML-Formulare, da diese zum Teil sehr dynamisch sind. Damit nutzen wir WTForms und haben die Möglichkeit, die Grundlagen von WTForms zu erlernen. Es steht durch die bedingte Nutzung jedoch im Verhältnis zum tatsächlichen Nutzen von WTForms für unsere Web-App.
+Die Entscheidung wurde im gesamten Team diskutiert und entschieden.
 
 ## Regarded Options
 
@@ -49,5 +51,5 @@ Formulare werden als Python-Klassen mit integrierter Validierung über die Bibli
 | 1 | Validierungslogik ist zentral in der Formularklasse gebündelt und muss nicht wiederholt werden | WTForms ist keinem aus der Gruppe bekannt und muss neu erlernt werden |
 | 2 | Integrierte Validatoren (z. B. für Pflichtfelder, E-Mail-Format) reduzieren den Code erheblich | Das Einarbeiten nimmt anfänglich Zeit in Anspruch |
 | 3 | Formulare sind als Python-Objekte wiederverwendbar und einfacher testbar | Die Fehleranfälligkeit ist initial erhöht, da keine Erfahrung mit WTForms vorhanden ist |
-| 4 | Trennung der Logik der Formuaren sowie Routen verbessern die Übersichtlichkeit der App | |
+| 4 | Trennung der Logik der Formuaren sowie Routen verbessern die Übersichtlichkeit der App | In Dynamischen Umgebungen kann WTForms schnell sehr komplex und starr werden |
  
