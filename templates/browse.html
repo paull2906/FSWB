@@ -18,10 +18,12 @@
             <h5>{{ quiz.title }}</h5>
             <div class="mb-2">
                 <span class="badge bg-info text-dark">{{ quiz.main_genre.name if quiz.main_genre else '–' }}</span>
-                ...
+                {% if quiz.subgenre %}
+                <span class="badge bg-light text-dark border">{{ quiz.subgenre.name }}</span>
+                {% endif %}
             </div>
             <p class="text-muted small mb-3">von {{ quiz.creator.username }} &middot; {{ quiz.songs|length }} Songs</p>
-            ...
+            <a href="{{ url_for('play', quiz_id=quiz.id) }}" class="btn btn-primary mt-auto">Spielen</a>
         </div>
     </div>
     {% else %}
