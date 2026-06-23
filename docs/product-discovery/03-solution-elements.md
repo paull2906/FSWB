@@ -8,7 +8,7 @@ nav_order: 3
 
 ## Core Solution
 
-LionRecords ist eine Web-App, auf der Quizmaster eigene Audio-Quizze erstellen und Player diese kompetitiv lösen können — mit persistenten Ranglisten auf Stadt-, Deutschland-, Europa- und Weltebene.
+LiveRecords ist eine Web-App, auf der Quizmaster eigene Audio-Quizze erstellen und Player diese kompetitiv lösen können — mit persistenten Ranglisten auf Stadt-, Deutschland-, Europa- und Weltebene.
 
 Die Spotify Web API liefert 30-Sekunden-Snippets für jeden Song, sodass keine eigene Audio-Lizenzierung notwendig ist.
 
