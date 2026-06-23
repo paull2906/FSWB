@@ -39,8 +39,8 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 | Contribution | Proof, e.g., git commits | Sources used |
 | :-- | :-- | :-- |
 | UI-Wireframes für alle App-Screens erstellt | - | Eigene Arbeit |
-| Value Proposition und Two-Sided Platform ausgearbeitet | [Assignment Re-Work](docs/assignment.md) | Claude (Anthropic) |
-| Creator-Motivation-System konzipiert (Badge-System, Geo-Rankings) | [Assignment Re-Work](docs/assignment.md) | Claude (Anthropic) |
+| Value Proposition und Two-Sided Platform ausgearbeitet | [Assignment Re-Work](docs/assignment.md) | Claude (Anthropic) als Diskussionspartner |
+| Creator-Motivation-System konzipiert (Badge-System, Geo-Rankings) | [Assignment Re-Work](docs/assignment.md) | Eigenes Konzept, Claude (Anthropic) zur Ideenverwaltung |
 ---
 ## AI Directory
 | #   | AI Tool | Purpose of Use | Affected Sections (Code + Docs) | Remarks, Procedure, Prompts |
