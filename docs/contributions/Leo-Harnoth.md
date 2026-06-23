@@ -43,13 +43,13 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 | \# | My contribution | Why I am proud of it | Which challenge I overcame |
 | :-- | :-- | :-- | :-- |
-| 1 | [Describe your individual contribution] |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
+| 1 | app.py aufgebaut | Ich bin stolz, das gesamte Backend-Grundgerüst der App entworfen und implementiert zu haben. Dabei konnte ich lernen, wie Routing, Session-Handling und Datenbank-Anbindung in Flask sauber zusammenspielen. | Die wohl größte Herausforderung war, dass ich Großteile des Codes fast vollständig offline schreiben musste und dadurch keinen Live-Zugriff auf Kursinhalte oder YouTube-Tutorials hatte. Ich musste daher mit vorab angefertigten Screenshots und bereits angeeignetem Wissen arbeiten und vieles aus dem Gedächtnis rekonstruieren. |
+| 2 | itunes.py aufgebaut | Ich konnte die Musikquelle der App über die öffentliche iTunes Search API aufbauen, ganz ohne API-Key, Authentifizierung oder Kosten. | Eine Herausforderung war die Cover-Auflösung: Die API gibt standardmäßig nur ein 100×100-Bild zurück. Die Lösung, die URL per String-Replace von 100x100 auf 300x300 umzuschreiben, ist nicht dokumentiert und musste ich durch Ausprobieren herausfinden. |
+| 3 | Design Decision: Kostenloser Zugang zu LiveRecords - keine Paywall in Phase 1 geleitet | Ich bin stolz, eine produktstrategische Entscheidung argumentativ fundiert hergeleitet zu haben, welche direkten Einfluss auf die Architektur hat (kein Billing, alle Kernfeatures offen). | Die Herausforderung war, drei konkrete Monetarisierungsoptionen gegeneinander abzuwägen und sauber zu begründen, warum eine Paywall das Cold-Start-Problem nur verschärft, statt es zu lösen. |
 
 ## Design Decisions that I led
 
-1. Kostenloser Zugang zu LionRecords - keine Paywall in Phase 1(../design-decisions/Kostenloser Zugang zu LionRecords - keine Paywall in Phase 1.md)
+1. Kostenloser Zugang zu LiveRecords - keine Paywall in Phase 1
 
 
 ---
@@ -58,11 +58,9 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 | Contribution | Proof, e.g., git commits | Sources used |
 | :-- | :-- | :-- |
-| [Design Challenge research] | [Research traces](../product-discovery/01-design-challenge.md#raw-materia) | See left |
-| [Refactor to use Flask Blueprints] | [Commit 1](https://github.com/hwrberlin/fswd/commit/d816e4), [Commit 2](https://github.com/hwrberlin/fswd/commit/75a6c1) | [Flask Documentation](https://flask.palletsprojects.com/en/stable/blueprints/#the-concept-of-blueprints) |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| app.py | [app.py](https://github.com/paull2906/Musik-Quiz/blob/main/app.py) | [HWR Berlin: FSWD](https://hwrberlin.github.io/fswd/git.html), [Python-Doku](https://docs.python.org/3/library/difflib.html), [Youtube Tutorial about SQLAlchemy](https://youtu.be/jobpptS9f8I?si=2ZG-9xSyMyq2lfS6) |
+| itunes.py | [itunes.py](https://github.com/paull2906/Musik-Quiz/blob/main/itunes.py) | [iTunes Search API](https://performance-partners.apple.com/search-api), [Python-Doku urllib](https://docs.python.org/3/library/urllib.request.html) |
+| Design Decision: Kostenloser Zugang zu LiveRecords - keine Paywall in Phase 1 | [Design Decision: Kostenloser Zugang zu LiveRecords - keine Paywall in Phase 1.md](https://github.com/paull2906/Musik-Quiz/blob/main/docs/Design%20Decisions/Kostenloser%20Zugang%20zu%20LiveRecords%20-%20keine%20Paywall%20in%20Phase%201.md) | Diskussionen in der Gruppe nach der Peer Review |
 
 ---
 
@@ -72,6 +70,5 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 | #   | AI Tool | Purpose of Use | Affected Sections (Code + Docs) | Remarks, Procedure, Prompts |
 | :-- | :--     | :--            | :--                             | :--                         |
-| 01  |         |                |                                 |                             |
-| 02  |         |                |                                 |                             |
-| ... |         |                |                                 |                             |
+| 01  | Claude | Fehlerbehebung bei app.py | [app.py](https://github.com/paull2906/Musik-Quiz/blob/main/app.py) | Ich habe claude.ai die Fehlermeldungen gegeben und mir von der KI dann Vorschläge zur Behebung geben lassen |
+| 02  | Claude (2) | Fehlerbehebung bei itunes.py | [itunes.py](https://github.com/paull2906/Musik-Quiz/blob/main/itunes.py) | Ich habe claude.ai die Fehlermeldungen gegeben und mir von der KI dann Vorschläge zur Behebung geben lassen |
