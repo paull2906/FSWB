@@ -28,7 +28,9 @@
             {% endif %}
             <div class="col-md-3">
                 {% if song.preview_url %}
-                <audio controls src="{{ song.preview_url }}" class="w-100"></audio>
+               <audio controls class="w-100">
+                    <source src="{{ song.preview_url }}" type="audio/mp4">
+                </audio>
                 {% else %}
                 <div class="d-flex align-items-center gap-2 text-warning p-2 bg-warning-subtle rounded">
                     <i class="bi bi-exclamation-circle-fill"></i>
