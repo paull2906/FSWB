@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Leaderboard – {{ quiz.title }}{% endblock %}
+{% block content %}
+<h2 class="mb-4"><i class="bi bi-trophy"></i> Leaderboard: {{ quiz.title }}</h2>
+
+<div class="mb-4">
+    <a href="{{ url_for('leaderboard', quiz_id=quiz.id) }}" class="btn btn-sm {{ 'btn-primary' if not selected_city else 'btn-outline-secondary' }} me-2">Global</a>
+    {% for c in cities %}
+    <a href="{{ url_for('leaderboard', quiz_id=quiz.id, city=c) }}" class="btn btn-sm {{ 'btn-primary' if selected_city == c else 'btn-outline-secondary' }} me-2">{{ c }}</a>
+    {% endfor %}
+</div>
+
+<table class="table table-striped align-middle">
+    <thead>
+        <tr>
+            <th>Rang</th>
+            <th>Spieler</th>
+            <th>Stadt</th>
+            <th>Punkte</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in entries %}
+        <tr class="{{ 'table-active' if user and entry.id == user.id }}">
+            <td>
+                {% if loop.index == 1 %}🏆
+                {% elif loop.index == 2 %}🥈
+                {% elif loop.index == 3 %}🥉
+                {% else %}{{ loop.index }}
+                {% endif %}
+            </td>
+            <td>{{ entry.username }}</td>
+            <td>{{ entry.city or '–' }}</td>
+            <td>{{ entry.best_score }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="4" class="text-muted">Noch keine Ergebnisse vorhanden.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
