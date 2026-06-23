@@ -8,14 +8,13 @@ app = Flask(__name__)
 app.config.from_mapping(
     SECRET_KEY='secret_key_just_for_dev_environment'
 )
-CSRFProtect(app)  # schützt unsere Formulare vor CSRF
+CSRFProtect(app) 
 
 from db import db, User, Quiz, Song, MainGenre, Subgenre, Score, hash_password
 from itunes import format_track, search_tracks
 
 
 def is_close_enough(guess, correct):
-    # Toleriert Tippfehler: Substring-Match ODER >= 75% Ähnlichkeit via difflib
     if not guess:
         return False
     g = guess.lower().strip()
@@ -39,13 +38,12 @@ def about():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    form = forms.RegisterForm()
+    form = forms.RegistrationForm()
     
     if form.validate_on_submit():
         username = form.username.data.strip()
         password = form.password.data
-        city = form.city.data.strip() if hasattr(form, 'city') and form.city.data else None
-        
+
         existing_user = db.session.execute(
             db.select(User).filter_by(username=username)
         ).scalars().first()
@@ -53,11 +51,11 @@ def register():
         if existing_user:
             flash('Dieser Benutzername ist bereits vergeben.', 'warning')
             return render_template('register-window.html', form=form)
-            
+
         new_user = User(
             username=username,
-            password_hash=hash_password(password),
-            city=city,
+            password_hash=hash_password(password), 
+            city=None,
             is_admin=False 
         )
         
@@ -68,35 +66,6 @@ def register():
         return redirect(url_for('login'))
         
     return render_template('register-window.html', form=form)
-    
-@app.route('/quiz/create', methods=['GET', 'POST'])
-def create_quiz():
-    user = get_session_user()
-    if not user:
-        flash('Bitte melde dich an.', 'warning')
-        return redirect(url_for('login'))
-
-    form = forms.CreateQuizForm()
-    main_genres = db.session.execute(db.select(MainGenre).order_by(MainGenre.name)).scalars()
-    form.main_genre_id.choices = [(g.id, g.name) for g in main_genres]
-    subgenres = db.session.execute(db.select(Subgenre).order_by(Subgenre.name)).scalars()
-    form.subgenre_id.choices = [(s.id, s.name) for s in subgenres]
-
-    if form.validate_on_submit():
-        quiz = Quiz(
-            title=form.title.data,
-            main_genre_id=form.main_genre_id.data,
-            subgenre_id=form.subgenre_id.data,
-            difficulty=form.difficulty.data,
-            creator_id=user['id'], 
-        )
-        db.session.add(quiz)
-        db.session.commit()
-        flash('Quiz has been created.', 'success')
-        return redirect(url_for('browse'))
-
-    return render_template('create_quiz.html', form=form)
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -105,12 +74,12 @@ def login():
     if form.validate_on_submit():
         username = form.username.data.strip()
         password = form.password.data
-
+        
         u = db.session.execute(
             db.select(User).filter_by(username=username)
         ).scalars().first()
-        
-        if u and u.password_hash == hash_password(password):
+
+        if u and u.password_hash == hash_password(password): 
             session['user'] = {'id': u.id, 'username': u.username, 'is_admin': u.is_admin, 'city': u.city}
             flash(f'Willkommen zurück, {u.username}!', 'success')
             return redirect(url_for('browse')) 
@@ -118,7 +87,6 @@ def login():
         flash('Ungültiger Benutzername oder Passwort.', 'danger')
         
     return render_template('login-window.html', form=form)
-
 
 @app.route('/logout')
 def logout():
@@ -147,13 +115,10 @@ def create():
     if not user:
         flash('Bitte melde dich an.', 'warning')
         return redirect(url_for('login'))
-    # keine Creator/Player-Trennung mehr -- jeder eingeloggte User darf Quizze erstellen
-
-    # bei jedem neuen Aufruf der Seite (GET) faengt man mit einem leeren Quiz an
+        
     if request.method == 'GET':
         session['staged'] = []
 
-    # die schon hinzugefuegten Songs liegen waehrend dem Erstellen in der Session
     staged = session.get('staged', [])
     search_results = []
     title = request.form.get('title', '')
@@ -164,7 +129,7 @@ def create():
 
     if request.method == 'POST':
         if 'do_search' in request.form:
-            # Button "Suchen" wurde gedrueckt
+            
             if search_query:
                 try:
                     raw = search_tracks(search_query)
@@ -172,7 +137,7 @@ def create():
                 except Exception:
                     flash('iTunes-Suche fehlgeschlagen. Bitte später erneut versuchen.', 'danger')
         elif 'add_idx' in request.form:
-            # ein "+" Button bei einem Suchergebnis wurde gedrueckt
+
             idx = request.form['add_idx']
             song = request.form.get(f'res_title_{idx}')
             if song:
@@ -186,13 +151,13 @@ def create():
                 })
                 session['staged'] = staged
         elif 'remove_idx' in request.form:
-            # das "x" bei einem schon hinzugefuegten Song wurde gedrueckt
+           
             idx = int(request.form['remove_idx'])
             if 0 <= idx < len(staged):
                 staged.pop(idx)
                 session['staged'] = staged
         elif 'do_save' in request.form:
-            # Button "Quiz veroeffentlichen"
+        
             if not title or not main_genre_id:
                 flash('Titel und Hauptgenre sind erforderlich.', 'danger')
             elif len(staged) < 2:
@@ -247,7 +212,6 @@ def play(quiz_id):
             title_ok = is_close_enough(guess_title, song.title)
             artist_ok = is_close_enough(guess_artist, song.artist)
 
-            # 100 Punkte fuer den Titel, 50 fuer den Kuenstler
             points = 0
             if title_ok:
                 points += 100
@@ -288,7 +252,6 @@ def result(quiz_id):
         db.select(Score).filter_by(quiz_id=quiz.id)
     ).scalars().all()
 
-    # wie viele verschiedene Spieler haben dieses Quiz schon gespielt
     player_ids = []
     for s in all_scores:
         if s.user_id not in player_ids:
@@ -296,8 +259,7 @@ def result(quiz_id):
     total_players = len(player_ids)
     if total_players == 0:
         total_players = 1
-
-    # Rang = Anzahl Spieler mit mehr Punkten + 1
+        
     rank = 1
     for s in all_scores:
         if s.points > points:
@@ -321,7 +283,6 @@ def leaderboard(quiz_id):
         db.select(Score).filter_by(quiz_id=quiz_id)
     ).scalars().all()
 
-    # beste Punktzahl pro Spieler raussuchen
     best_scores = {}
     for s in all_scores:
         if s.user_id not in best_scores or s.points > best_scores[s.user_id]:
@@ -370,7 +331,6 @@ def admin():
     return render_template('admin.html', user=user, users=users, quizzes=quizzes)
 
 
-# kleine JSON-API fuer alle Quizze
 @app.route('/api/quizzes')
 def api_quizzes():
     quizzes = db.session.execute(db.select(Quiz)).scalars().all()
@@ -382,7 +342,6 @@ def api_quizzes():
     } for q in quizzes])
 
 
-# JSON-API fuer die Bestenliste eines Quiz
 @app.route('/api/leaderboard/<int:quiz_id>')
 def api_leaderboard(quiz_id):
     quiz = db.session.get(Quiz, quiz_id)
