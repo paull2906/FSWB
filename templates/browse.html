@@ -1,12 +1,11 @@
-{% extends 'base.html' %}
-{% block title %}Browse – Live Records{% endblock %}
 {% block content %}
 <h2 class="mb-4"><i class="bi bi-search"></i> Quizze durchsuchen</h2>
 
 <div class="mb-4">
-    <a href="{{ url_for('browse') }}" class="btn btn-sm {{ 'btn-primary' if not selected_genre else 'btn-outline-secondary' }} me-2">Alle</a>
-    {% for g in genres %}
-    <a href="{{ url_for('browse', genre=g) }}" class="btn btn-sm {{ 'btn-primary' if selected_genre == g else 'btn-outline-secondary' }} me-2">{{ g }}</a>
+    <a href="{{ url_for('browse') }}" class="btn btn-sm {{ 'btn-primary' if not selected_main_genre_id else 'btn-outline-secondary' }} me-2">Alle</a>
+    {% for g in main_genres %}
+    <a href="{{ url_for('browse', main_genre_id=g.id) }}"
+       class="btn btn-sm {{ 'btn-primary' if selected_main_genre_id == g.id else 'btn-outline-secondary' }} me-2">{{ g.name }}</a>
     {% endfor %}
 </div>
 
@@ -16,24 +15,11 @@
         <div class="card quiz-card h-100 p-3">
             <h5>{{ quiz.title }}</h5>
             <div class="mb-2">
-                <span class="badge bg-info text-dark">{{ quiz.genre }}</span>
-                {% if quiz.difficulty == 'easy' %}
-                <span class="badge bg-success">Leicht</span>
-                {% elif quiz.difficulty == 'hard' %}
-                <span class="badge bg-danger">Schwer</span>
-                {% else %}
-                <span class="badge bg-warning text-dark">Mittel</span>
-                {% endif %}
+                <span class="badge bg-info text-dark">{{ quiz.main_genre.name if quiz.main_genre else '–' }}</span>
+                ...
             </div>
             <p class="text-muted small mb-3">von {{ quiz.creator.username }} &middot; {{ quiz.songs|length }} Songs</p>
-            <div class="mt-auto d-flex gap-2">
-                <a href="{{ url_for('play', quiz_id=quiz.id) }}" class="btn btn-primary btn-sm flex-grow-1">
-                    <i class="bi bi-play-fill"></i> Spielen
-                </a>
-                <a href="{{ url_for('leaderboard', quiz_id=quiz.id) }}" class="btn btn-outline-secondary btn-sm">
-                    <i class="bi bi-trophy"></i>
-                </a>
-            </div>
+            ...
         </div>
     </div>
     {% else %}
