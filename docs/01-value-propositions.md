@@ -52,7 +52,7 @@ LiveRecords möchte nicht nur eine "Musikquiz-App" sein, sondern diesen Personen
 ### Ziel: Erstellung eines Nischen-Musik-Quizzes zur Steigerung der eigenen Sichtbarkeit.
 - Einstiegspunkt: Der Creator sieht, dass sein spezifisches Nischen-Genre noch unbesetzt ist (First-Moves-Anreiz)
 - Schritt 1: Registrierung/Login mit Benutzername und Passwort
-- Schritt 2: Schritt 2: Nutzung der iTunes-Suchmaske. Creator fügt Songs hinzu, benennt das Quiz, wählt das Genre und legt Schwierigkeitsgrad fest
+- Schritt 2: Nutzung der iTunes-Suchmaske. Creator fügt Songs hinzu, benennt das Quiz, wählt das Genre und legt Schwierigkeitsgrad fest
 - Schritt 3: Creator kann das Quiz veröffentlichen.
 - Abschluss: Das Quiz ist live und für alle sichtbar. 
 
