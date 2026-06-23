@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}Ergebnis – {{ quiz.title }}{% endblock %}
+{% block content %}
+<h2 class="mb-4">
+    {% if rank == 1 %}<i class="bi bi-trophy-fill text-warning"></i>
+    {% elif rank == 2 %}<i class="bi bi-award-fill text-secondary"></i>
+    {% elif rank == 3 %}<i class="bi bi-award text-danger"></i>
+    {% else %}<i class="bi bi-music-note-beamed"></i>
+    {% endif %}
+    Ergebnis: {{ quiz.title }}
+</h2>
+
+<div class="row text-center mb-4 g-3">
+    <div class="col-md-4">
+        <div class="card p-3">
+            <div class="display-5 fw-bold text-primary">{{ points }}</div>
+            <div class="text-muted">Punkte</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-3">
+            <div class="display-5 fw-bold text-primary">#{{ rank }}</div>
+            <div class="text-muted">Globaler Rang</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-3">
+            <div class="display-5 fw-bold text-primary">{{ total_players }}</div>
+            <div class="text-muted">Spieler insgesamt</div>
+        </div>
+    </div>
+</div>
+
+{% for r in results %}
+<div class="card p-3 mb-2 {{ 'bg-success-subtle' if (r.title_ok and r.artist_ok) else ('bg-danger-subtle' if (not r.title_ok and not r.artist_ok) else '') }}">
+    <div class="row align-items-center g-3">
+        {% if r.cover_url %}
+        <div class="col-auto">
+            <img src="{{ r.cover_url }}" alt="" width="56" height="56" class="rounded">
+        </div>
+        {% endif %}
+        <div class="col-md-4">
+            <div class="fw-semibold">{{ r.title }}</div>
+            <div class="small text-muted">{{ r.artist }}</div>
+        </div>
+        <div class="col-md-5">
+            <div class="small">
+                {% if r.title_ok %}<i class="bi bi-check-circle-fill text-success"></i>{% else %}<i class="bi bi-x-circle-fill text-danger"></i>{% endif %}
+                Titel geraten: "{{ r.guess_title or '–' }}"
+            </div>
+            <div class="small">
+                {% if r.artist_ok %}<i class="bi bi-check-circle-fill text-success"></i>{% else %}<i class="bi bi-x-circle-fill text-danger"></i>{% endif %}
+                Künstler geraten: "{{ r.guess_artist or '–' }}"
+            </div>
+        </div>
+        <div class="col-md-2 text-end">
+            <span class="badge bg-primary fs-6">{{ r.points }} Pkt</span>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<div class="mt-4 d-flex gap-2">
+    <a href="{{ url_for('play', quiz_id=quiz.id) }}" class="btn btn-primary">
+        <i class="bi bi-arrow-repeat"></i> Nochmal spielen
+    </a>
+    <a href="{{ url_for('leaderboard', quiz_id=quiz.id) }}" class="btn btn-outline-secondary">
+        <i class="bi bi-trophy"></i> Leaderboard
+    </a>
+    <a href="{{ url_for('browse') }}" class="btn btn-outline-secondary">
+        <i class="bi bi-search"></i> Andere Quizze
+    </a>
+</div>
+{% endblock %}
