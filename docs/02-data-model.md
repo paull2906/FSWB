@@ -37,7 +37,6 @@ erDiagram
     QUIZ {
         int quiz_id PK
         string title
-        string description
         int creator_id FK
         int main_genre_id FK
         int subgenre_id FK
