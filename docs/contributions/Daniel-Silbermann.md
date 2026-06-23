@@ -58,10 +58,10 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 | Contribution | Proof, e.g., git commits | Sources used |
 | :-- | :-- | :-- |
-| [Design Challenge research] | [Research traces](../product-discovery/01-design-challenge.md#raw-materia) | See left |
-| [Refactor to use Flask Blueprints] | [Commit 1](https://github.com/hwrberlin/fswd/commit/d816e4), [Commit 2](https://github.com/hwrberlin/fswd/commit/75a6c1) | [Flask Documentation](https://flask.palletsprojects.com/en/stable/blueprints/#the-concept-of-blueprints) |
-|  |  |  |
-|  |  |  |
+| Forms.py erstellt für Grundlage einiger HTML Seiten | [Forms.py](forms.py) | [YouTube](https://www.youtube.com/watch?v=UIJKdCIEXUQ), [HWR-Berlin Git](https://hwrberlin.github.io/fswd/) |
+| Das LogIn Fenster erstellt | [LoginFenster](templates/login-window.html) | [YouTube](https://www.youtube.com/watch?v=QnDWIZuWYW0&t=3s), [HWR-Berlin Git](https://hwrberlin.github.io/fswd/), [FreeCodeCamp](https://www.freecodecamp.org/learn/responsive-web-design-v9/) | |
+| Das Registrieren Fenster erstellt | [Registrier-Fenster](templates/register-window.html) | [YouTube](https://www.youtube.com/watch?v=QnDWIZuWYW0&t=3s), [HWR-Berlin Git](https://hwrberlin.github.io/fswd/), [FreeCodeCamp](https://www.freecodecamp.org/learn/responsive-web-design-v9/) |
+| Für eine gute Visualiesierung der Objekte war ich ebenfalls verantwortlich | [Style.CSS](static/css/style.css) | [YouTube](https://www.youtube.com/watch?v=QnDWIZuWYW0&t=3s), [HWR-Berlin Git](https://hwrberlin.github.io/fswd/), [FreeCodeCamp](https://www.freecodecamp.org/learn/responsive-web-design-v9/) |
 |  |  |  |
 
 ---
@@ -72,8 +72,8 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 
 | #   | AI Tool | Purpose of Use | Affected Sections (Code + Docs) | Remarks, Procedure, Prompts |
 | :-- | :--     | :--            | :--                             | :--                         |
-| 01  |  Gemini - Image Generation       |  Visuelle Umsetzung und Verfeinerung unserer eigenen UI-Konzeptvorstellung              |  https://github.com/paull2906/Musik-Quiz/blob/main/docs/01-value-propositions.md#target-scope                               |  In erster Linie hatten wir bereits visuelle skizzen und erste Ideen gezeichnet und waren grob mit dem design zufrieden. Um diese Visualisierung besser und verständlicher darzustellen, gaben wir Gemini die Aufgabe unser bisheriges UI realistischer und veranschaulicher darzustellen. Durch einen interativen Prozess und gezieltes Feedback, ergab sich dann schrittweise das gewünschte und fertige UI.                            |
+| 01  |  Gemini - Image Generation       |  Visuelle Umsetzung und Verfeinerung unserer eigenen UI-Konzeptvorstellung              |  [Value-Propositions.md](docs/01-value-propositions.md)                               |  In erster Linie hatten wir bereits visuelle skizzen und erste Ideen gezeichnet und waren grob mit dem design zufrieden. Um diese Visualisierung besser und verständlicher darzustellen, gaben wir Gemini die Aufgabe unser bisheriges UI realistischer und veranschaulicher darzustellen. Durch einen interativen Prozess und gezieltes Feedback, ergab sich dann schrittweise das gewünschte und fertige UI.                            |
 | 02  |     Gemini (1)    |       Gefragt wie man einen gewissen Code erstellen kann         |              [forms.py](forms.py)                   |              Ich habe Gemini gefragt was man importieren muss für ein LogIn und Register Screen und auch nach dem Sinn gefragt um WTForms auch inhaltlich zu verstehen um das dann besser anzuwenden.             |   
 | 3 |   Gemini(2)       |       Fragen weshalb die App nicht startet        |          [App.py](app.py)                      |          Ich habe Gemini die Fehlermeldung gezeigt und frage weshalb die App nicht startet                   |
 | 4 | Gemini (3)         | Beim starten der App kam eine große Fehlermeldung, die ich nicht entziffern konnte. Ich habe diese also dann bei Gemini rein geschickt |  [App.py](app.py) | Die Fehlermeldung habe ich abgesenet und es ergabt sich, dass ich Kommata und andere formelles falsch geschickt habe 
-| 5 | Gemini (4) | Generelle Fragen zum Code gestellt, wenn etwas nicht geklappt hat. | Überwiegend bei folgenden Codes: (templates/register-window.html) & (templates/login-window.html) | Generelle Fragen, wenn etwas nicht so geklappt hat wie ich es mir vorgestellt habe.
+| 5 | Gemini (4) | Generelle Fragen zum Code gestellt, wenn etwas nicht geklappt hat. | Überwiegend bei folgenden Codes: [Registrier-Fenster](templates/register-window.html) & [LoginFenster](templates/login-window.html) | Generelle Fragen, wenn etwas nicht so geklappt hat wie ich es mir vorgestellt habe.
