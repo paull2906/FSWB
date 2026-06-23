@@ -52,9 +52,25 @@
                     <input type="text" class="form-control" name="title" value="{{ title }}">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Genre</label>
-                    <input type="text" class="form-control" name="genre" value="{{ genre }}">
+                    <label class="form-label">Hauptgenre</label>
+                    <select class="form-select" name="main_genre_id">
+                        <option value="">– bitte wählen –</option>
+                        {% for g in main_genres %}
+                        <option value="{{ g.id }}" {{ 'selected' if main_genre_id|string == g.id|string }}>{{ g.name }}</option>
+                        {% endfor %}
+                      </select>
                 </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Subgenre</label>
+                    <select class="form-select" name="subgenre_id">
+                        <option value="">– optional –</option>
+                        {% for s in subgenres %}
+                        <option value="{{ s.id }}" {{ 'selected' if subgenre_id|string == s.id|string }}>{{ s.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
                 <div class="mb-3">
                     <label class="form-label">Schwierigkeit</label>
                     <select class="form-select" name="difficulty">
