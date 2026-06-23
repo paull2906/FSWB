@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}Admin – Live Records{% endblock %}
+{% block content %}
+<h2 class="mb-4"><i class="bi bi-shield-lock"></i> Admin-Panel</h2>
+
+<h5 class="mb-3">Benutzer</h5>
+<table class="table table-striped align-middle mb-5">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Benutzername</th>
+            <th>Rolle</th>
+            <th>Stadt</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for u in users %}
+        <tr>
+            <td>{{ u.id }}</td>
+            <td>{{ u.username }}</td>
+            <td>
+                {% if u.role == 'admin' %}
+                <span class="badge bg-danger">{{ u.role }}</span>
+                {% elif u.role == 'creator' %}
+                <span class="badge bg-primary">{{ u.role }}</span>
+                {% else %}
+                <span class="badge bg-secondary">{{ u.role }}</span>
+                {% endif %}
+            </td>
+            <td>{{ u.city or '–' }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h5 class="mb-3">Quizze</h5>
+<table class="table table-striped align-middle">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titel</th>
+            <th>Genre</th>
+            <th>Ersteller</th>
+            <th>Songs</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for q in quizzes %}
+        <tr>
+            <td>{{ q.id }}</td>
+            <td>{{ q.title }}</td>
+            <td>{{ q.genre }}</td>
+            <td>{{ q.creator.username }}</td>
+            <td>{{ q.songs|length }}</td>
+            <td>
+                <a href="{{ url_for('confirm_delete', quiz_id=q.id) }}"
+                   class="btn btn-sm btn-outline-danger">
+                    <i class="bi bi-trash"></i> Löschen
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
