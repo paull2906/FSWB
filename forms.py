@@ -9,6 +9,7 @@ class LoginForm (FlaskForm):
 
 class RegistrationForm (FlaskForm):
     username = StringField ("Benutzername", validators=[DataRequired()])
+    city = StringField("Stadt (optional)")
     password = PasswordField ("Passwort", validators =[DataRequired()])
     password_confirm = PasswordField ("Passwort bestätigen", validators =[DataRequired(), EqualTo("password")])
     submit = SubmitField ("Konto erstellen")
