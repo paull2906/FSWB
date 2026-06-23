@@ -308,7 +308,18 @@ def leaderboard(quiz_id):
     return render_template('leaderboard.html', user=user, quiz=quiz, entries=entries,
                             cities=cities, selected_city=city)
 
-
+@app.route('/admin/confirm-delete/<int:quiz_id>')
+def confirm_delete(quiz_id):
+    user = get_session_user()
+    if not user or not user['is_admin']:
+        flash('Nur für Admins.', 'danger')
+        return redirect(url_for('index'))
+    quiz = db.session.get(Quiz, quiz_id)
+    if not quiz:
+        flash('Quiz nicht gefunden.', 'danger')
+        return redirect(url_for('admin'))
+    return render_template('confirm_delete.html', user=user, quiz=quiz)
+    
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
     user = get_session_user()
