@@ -186,9 +186,9 @@ def create():
     main_genres = db.session.execute(db.select(MainGenre)).scalars().all()
 
     if main_genre_id:
-    subgenres = db.session.execute(
-        db.select(Subgenre).filter_by(main_genre_id=int(main_genre_id))
-    ).scalars().all()
+        subgenres = db.session.execute(
+            db.select(Subgenre).filter_by(main_genre_id=int(main_genre_id))
+        ).scalars().all()
     else:
     subgenres = []
 
