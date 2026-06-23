@@ -1,5 +1,4 @@
 import hashlib
-from pathlib import Path
 import json
 import click
 from flask_sqlalchemy import SQLAlchemy
@@ -115,7 +114,7 @@ def import_genres_from_json(path):
     for main_name, sub_names in genre_map.items():
         main_genre = db.session.execute(
             db.select(MainGenre).filter_by(name=main_name)
-        ).scalar()
+        ).scalar().first()
         if main_genre is None:
             main_genre = MainGenre(name=main_name)
             db.session.add(main_genre)
@@ -125,7 +124,7 @@ def import_genres_from_json(path):
         for sub_name in sub_names:
             exists = db.session.execute(
                 db.select(Subgenre).filter_by(name=sub_name, main_genre_id=main_genre.id)
-            ).scalar()
+            ).scalar().first()
             if exists is None:
                 db.session.add(Subgenre(name=sub_name, main_genre_id=main_genre.id))
                 added_sub += 1
