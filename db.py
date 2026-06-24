@@ -204,7 +204,6 @@ def insert_sample():
         Score(user_id=user2.id, quiz_id=quiz1.id, points=200),
         Score(user_id=user1.id, quiz_id=quiz2.id, points=100),
         Score(user_id=user2.id, quiz_id=quiz3.id, points=200),
-        Score(user_id=user1.id, quiz_id=quiz3.id, points=50)
     ]
 
     db.session.add_all(songs + scores)
