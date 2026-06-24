@@ -162,18 +162,21 @@ def insert_sample():
     # Create sample genres
     electronic = MainGenre(name='Electronic')
     jazz = MainGenre(name='Jazz')
-    db.session.add_all([admin, user1, user2, electronic, jazz])
+    rap = MainGenre(name='Hip-Hop / Rap')
+    db.session.add_all([admin, user1, user2, electronic, jazz, rap])
     db.session.commit()
 
     techno = Subgenre(name='Techno', main_genre_id=electronic.id)
     bebop = Subgenre(name='Bebop', main_genre_id=jazz.id)
-    db.session.add_all([techno, bebop])
+    gangsta_rap = Subgenre(name='West Coast Hip-Hop', main_genre_id=rap.id)
+    db.session.add_all([techno, bebop, gangsta_rap])
     db.session.commit()
 
     # Create sample quizzes
     quiz1 = Quiz(title='Electronic Starter', creator_id=admin.id, main_genre_id=electronic.id, subgenre_id=techno.id, difficulty='Easy')
     quiz2 = Quiz(title='Jazz Classics', creator_id=user1.id, main_genre_id=jazz.id, subgenre_id=bebop.id, difficulty='Medium')
-    db.session.add_all([quiz1, quiz2])
+    quiz3 = Quiz(title='90s West Coast Hip Hop', creator_id=user2.id, main_genre_id=rap.id, subgenre_id=gangsta_rap.id, difficulty='Hard')
+    db.session.add_all([quiz1, quiz2, quiz3])
     db.session.commit()
 
     # Create sample songs
@@ -183,6 +186,10 @@ def insert_sample():
         ('Boys Noize Oi Oi Oi',        quiz1.id, 2),
         ('Dave Brubeck Take Five',     quiz2.id, 1),
         ('Frank Sinatra Fly Me to the Moon', quiz2.id, 2),
+        ('N.W.A. Straight Outta Compton', quiz3.id, 1),
+        ('Ice Cube You Know How We Do It', quiz3.id, 2),
+        ('2Pac All About U', quiz3.id, 3),
+        ('Westside Connection Bow Down', quiz3.id, 4),
     ]
     
     songs = []
@@ -195,6 +202,9 @@ def insert_sample():
     scores = [
         Score(user_id=user1.id, quiz_id=quiz1.id, points=150),
         Score(user_id=user2.id, quiz_id=quiz1.id, points=200),
+        Score(user_id=user1.id, quiz_id=quiz2.id, points=100),
+        Score(user_id=user2.id, quiz_id=quiz3.id, points=200),
+        Score(user_id=user1.id, quiz_id=quiz3.id, points=50)
     ]
 
     db.session.add_all(songs + scores)
