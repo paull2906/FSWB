@@ -62,7 +62,7 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 | Das LogIn Fenster erstellt | [LoginFenster](templates/login-window.html) | [YouTube](https://www.youtube.com/watch?v=QnDWIZuWYW0&t=3s), [HWR-Berlin Git](https://hwrberlin.github.io/fswd/), [FreeCodeCamp](https://www.freecodecamp.org/learn/responsive-web-design-v9/) | |
 | Das Registrieren Fenster erstellt | [Registrier-Fenster](templates/register-window.html) | [YouTube](https://www.youtube.com/watch?v=QnDWIZuWYW0&t=3s), [HWR-Berlin Git](https://hwrberlin.github.io/fswd/), [FreeCodeCamp](https://www.freecodecamp.org/learn/responsive-web-design-v9/) |
 | Für eine gute Visualiesierung der Objekte war ich ebenfalls verantwortlich | [Style.CSS](static/css/style.css) | [YouTube](https://www.youtube.com/watch?v=QnDWIZuWYW0&t=3s), [HWR-Berlin Git](https://hwrberlin.github.io/fswd/), [FreeCodeCamp](https://www.freecodecamp.org/learn/responsive-web-design-v9/) |
-| Entschieden WTForms zu verwenden | [WTForms](https://github.com/paull2906/Musik-Quiz/blob/41817b4e7d98c8c7d214ec102f290cc64b5719c9/docs/Design%20Decisions/What%20the%20Forms.md) | [HWR-Berlin Git](https://hwrberlin.github.io/fswd/), In Vorlesung erfahren was WTForms genau macht |
+| Design Decision: WhatTheForms | [WTForms](https://github.com/paull2906/Musik-Quiz/blob/41817b4e7d98c8c7d214ec102f290cc64b5719c9/docs/Design%20Decisions/What%20the%20Forms.md) | [HWR-Berlin Git](https://hwrberlin.github.io/fswd/), In Vorlesung erfahren was WTForms genau macht |
 
 ---
 
