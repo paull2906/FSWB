@@ -17,7 +17,7 @@ Beat-The-Track ist eine Flask-basierte Web-App, in der User Musik-Quizze spielen
 
 ## Improvements / Refinements since First Submission
 
-[Assess implementation of improvements / refinements since First Submission (as presented during Oral Examination).]
+In app.py wurde die Funktion is_close_enough() verändert. Zum einen wurde eine Eingabe, die nur aus Leerzeichen besteht, vorher fälschlicherweise als richtige Antwort gewertet, was durch eine zusätzliche Prüfung direkt nach dem Entfernen der Leerzeichen behoben wurde. Zum anderen konnte man vorher mit der Eingabe eines einzelnen häufigen Buchstabens wie „e" fast jeden Songtitel als richtig geraten durchgehen lassen, da der Teilstring-Vergleich keine Mindestlänge hatte; das wurde durch eine neue Konstante MIN_SUBSTRING_LEN = 3 gefixt, die den Teilstring-Shortcut erst ab drei Zeichen greifen lässt.
 
 
 {: .fs-2 }
