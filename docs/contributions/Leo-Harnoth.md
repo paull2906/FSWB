@@ -75,5 +75,6 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 | :-- | :--     | :--            | :--                             | :--                         |
 | 01  | Claude (1) | Fehlerbehebung bei app.py | [app.py](https://github.com/paull2906/Musik-Quiz/blob/main/app.py) | Ich habe claude.ai die Fehlermeldungen gegeben und mir von der KI dann Vorschläge zur Behebung geben lassen |
 | 02  | Claude (2) | Fehlerbehebung bei itunes.py | [itunes.py](https://github.com/paull2906/Musik-Quiz/blob/main/itunes.py) | Ich habe claude.ai die Fehlermeldungen gegeben und mir von der KI dann Vorschläge zur Behebung geben lassen |
+| 03  | Claude (3) | Vorschlag zum Importieren von SequenceMatcher in app.py | [app.py](https://github.com/paull2906/Musik-Quiz/blob/main/app.py) | Ich wollte die Funktion is_close_enough implementieren und brauchte eine passende Klasse zum Abgleichen der gegebenen Antwort und der richtigen Antwort, woraufhin mir die KI SequenceMatcher vorgeschlagen hat, was ich dann auch übernommen habe.  |
 
 
