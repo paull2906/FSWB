@@ -69,6 +69,8 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 |Templates/404.html| [Templates/404.html](https://github.com/paull2906/Musik-Quiz/blob/26ba56d590b074bd8434f61d4d6e31ee85470334/templates/404.html)| [fswd-app](https://github.com/hwrberlin/fswd-app.git)|
 |Template/500.html|[Template/500.html](https://github.com/paull2906/Musik-Quiz/blob/26ba56d590b074bd8434f61d4d6e31ee85470334/templates/500.html)|[fswd-app](https://github.com/hwrberlin/fswd-app.git)|
 |Design Decision: WTForms | [Design Decision: WTForms](https://github.com/paull2906/Musik-Quiz/blob/88a66417021ff376452219d6ae8fa5b8963910ec/docs/Design%20Decisions/What%20the%20Forms.md) | [fswd-app](https://github.com/hwrberlin/fswd-app.git), Claude(4), [HWR Berlin: FSWB](https://hwrberlin.github.io/fswd/git.html)|
+|Ablaufdiagramm für Happy-path| Commit 03f521d, [01-Value-Proposition](https://github.com/paull2906/Musik-Quiz/blob/03f521d5c59c2f4aa717e5d2f08aa840b53e2084/docs/01-value-propositions.md) | Claude (5)|
+
 
 ---
 
@@ -83,3 +85,4 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 | 03 |Claude(2)|Gegenüberstellung SQLAlchemy und SQL zum Vergleich| [Design Decision: SQLAlchemy.md](https://github.com/paull2906/Musik-Quiz/blob/e4638a46008706adf03c37b279eb9453c4071847/docs/Design%20Decisions/SQLAlchemy.md), Indirekter Effekt auf [DB.py](https://github.com/paull2906/Musik-Quiz/blob/09fec4f2f44066ef569332297981ba74984fefd7/db.py), da es uns bei der Entscheidung unterstützt hat|Wir haben Claude genutzt um einen übersichtlichen Vergleich von SQL und SQAlchemy erstellen zu lassen, das unsere Entscheidung unterstützen sollte.|  
 |04 | Claude(3) | Fehlerbehebung für db.py | [DB.py](https://github.com/paull2906/Musik-Quiz/blob/09fec4f2f44066ef569332297981ba74984fefd7/db.py) | Die KI hat mir an verschiedenen Stellen geholfen, Fehler im Code zu beheben. |
 |05| Claude(4) | Aufzeigen von Vor- und Nachteilen von WTForms für Web-Apps | [Design Decision: WTForms](https://github.com/paull2906/Musik-Quiz/blob/88a66417021ff376452219d6ae8fa5b8963910ec/docs/Design%20Decisions/What%20the%20Forms.md) | Ich habe KI genutzt, um mir einen ersten Überblick über WTForms zu verschaffen, sowie Vor- und Nachteile aufzeigen zu lassen. |
+|06| Claude(5) | Tutorial zur Syntax von Ablaufdiagrammen in markdown und Fehlerbehebung |  Commit 03f521d, [01-Value-Proposition](https://github.com/paull2906/Musik-Quiz/blob/03f521d5c59c2f4aa717e5d2f08aa840b53e2084/docs/01-value-propositions.md) | Claude hat eine Übersicht erstellt zu den wichtigsten Elementen von Ablaufdiagrammen in Markdown und wie man mit diesen umgeht. |
