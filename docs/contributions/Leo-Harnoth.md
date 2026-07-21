@@ -50,6 +50,7 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 ## Design Decisions that I led
 
 1. Kostenloser Zugang zu LiveRecords - keine Paywall in Phase 1
+2. Detaillierte Profilansicht 
 
 
 ---
@@ -61,7 +62,7 @@ Mir ist weiterhin bewusst, dass ich, sofern ich zur Erstellung dieser Arbeit KI-
 | app.py | [app.py](https://github.com/paull2906/Musik-Quiz/blob/main/app.py) | [HWR Berlin: FSWD](https://hwrberlin.github.io/fswd/git.html), [Python-Doku](https://docs.python.org/3/library/difflib.html), [Youtube Tutorial about SQLAlchemy](https://youtu.be/jobpptS9f8I?si=2ZG-9xSyMyq2lfS6) |
 | itunes.py | [itunes.py](https://github.com/paull2906/Musik-Quiz/blob/main/itunes.py) | [iTunes Search API](https://performance-partners.apple.com/search-api), [Python-Doku urllib](https://docs.python.org/3/library/urllib.request.html) |
 | Design Decision: Kostenloser Zugang zu LiveRecords - keine Paywall in Phase 1 | [Design Decision: Kostenloser Zugang zu LiveRecords - keine Paywall in Phase 1.md](https://github.com/paull2906/Musik-Quiz/blob/main/docs/Design%20Decisions/Kostenloser%20Zugang%20zu%20LiveRecords%20-%20keine%20Paywall%20in%20Phase%201.md) | Diskussionen in der Gruppe nach der Peer Review |
-
+| Design Decision: Detaillierte Profilansicht | [Design Decision: Detaillierte Profilansicht](https://github.com/paull2906/Musik-Quiz/blob/main/docs/Design%20Decisions/Detaillierte%20Profilansicht.md) | Diskussionen in der Gruppe nach dem Oral Exam |
 ---
 
 ## AI Directory
