@@ -42,11 +42,52 @@ LiveRecords ist eine Web-Aplication, auf der Quizmaster eigene Audio-Quizze erst
 
 LiveRecords visiert eine sehr spezifische, aber auch weltweit relevante Gruppe an: 
   - ## Menschen, für die Musik kein Hobby ist, sondern eine Identität
-Sie kennen nicht nut den Hit - sie kennen auch die vertrendenden Musiker, die Texte, die Geschichte dahinter und vieles Mehr.
+Sie kennen nicht nur den Hit - sie kennen auch die vertrendenden Musiker, die Texte, die Geschichte dahinter und vieles Mehr.
 LiveRecords möchte nicht nur eine "Musikquiz-App" sein, sondern diesen Personen eine Bühne bieten, um sich auszutauschen aber auch um sich zu duellieren. 
   - Konkrete Beispiele könnte der Berliner sein, der jeden deutschen Rap-Release seit 1997 auswendig kennt, die Wienerin, die im Jazz-Forum moderiert oder auch der Discord-Server mit tauseden Mitgliedern, in dem "Underrated-Hits" oder allgemein Musik geteilt wird, die einen gerade interessiert. 
 
 #  Happy Path
+
+```mermaid
+flowchart TD
+    A([GET /]) --> B["redirect → /login"]
+    B --> C["GET /register<br/>RegistrationForm"]
+    C --> D["POST /register<br/>hash_password()"]
+    D --> E[("add(User)<br/>commit()")]
+    E --> F["redirect → /login"]
+
+    F --> G["POST /login<br/>hash-Vergleich"]
+    G --> H["session['user'] setzen"]
+    H --> I["redirect → /browse"]
+    I --> J["Quizze laden<br/>render browse.html"]
+
+    J --> XOR{"XOR<br/>Spielen oder Erstellen?"}
+
+    %% Spieler-Pfad
+    XOR -->|Quiz spielen| K["GET /play/id"]
+    K --> L["POST /play/id"]
+    L --> M["je Song: is_close_enough()<br/>Titel +100 / Artist +50"]
+    M --> N[("add(Score)<br/>commit()")]
+    N --> O["session['last_results']<br/>redirect → /result"]
+    O --> P["Rang + total_players<br/>render result.html"]
+    P --> Q["GET /leaderboard/id<br/>best_scores + sort"]
+    Q --> R([render leaderboard.html])
+
+    %% Ersteller-Pfad
+    XOR -->|Quiz erstellen| S["GET /create<br/>session['staged'] = []"]
+    S --> T["render create.html"]
+    T -->|POST do_search| U["search_tracks()<br/>format_track()"]
+    U -.->|search_results| T
+    T -->|POST add_idx| V["staged.append(...)<br/>session['staged']"]
+    V -.-> T
+    T -->|POST remove_idx| W["staged.pop(idx)<br/>session['staged']"]
+    W -.-> T
+    T -->|POST do_save| X["Validierung ok:<br/>Titel+Genre, ≥2 Songs"]
+    X --> Y{{"add(Quiz)<br/>flush() → quiz.id"}}
+    Y --> Z[("je Song: add(Song)<br/>commit()")]
+    Z --> AA["session.pop('staged')<br/>redirect → /browse"]
+    AA -.->|redirect| J
+```
 
 ## Happy Path A: Der Quizmaster
 ### Ziel: Erstellung eines Nischen-Musik-Quizzes zur Steigerung der eigenen Sichtbarkeit.
