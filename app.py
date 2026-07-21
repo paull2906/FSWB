@@ -13,13 +13,16 @@ CSRFProtect(app)
 from db import db, User, Quiz, Song, MainGenre, Subgenre, Score, hash_password
 from itunes import format_track, search_tracks
 
+MIN_SUBSTRING_LEN = 3
 
 def is_close_enough(guess, correct):
     if not guess:
         return False
     g = guess.lower().strip()
+    if not g:
+        return False
     c = correct.lower().strip()
-    if g in c or c in g:
+    if len(g) >= MIN_SUBSTRING_LEN and (g in c or c in g):
         return True
     return SequenceMatcher(None, g, c).ratio() >= 0.75
 
