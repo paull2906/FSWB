@@ -17,8 +17,8 @@ Updated
 ## Problem Statement
 
 Die Idee einer detaillierten Profilansicht (Spielhistorie, erstellte Quizze, ggf. Statistiken pro Nutzer) kam im Rahmen der Weiterentwicklung des Musik-Quiz auf. 
-Das Datenmodell unterstützt das bereits: User.scores und User.quizzes sind als Relationships in db.py vorhanden (db.py:30-31), 
-eine Profilseite ließe sich rein technisch ohne Schema-Änderung umsetzen, sondern nur über eine neue Route + Template.
+Das Datenmodell unterstützt das bereits, da User.scores und User.quizzes bereits als Relationships in db.py vorhanden sind. 
+Eine Profilseite ließe sich rein technisch also ohne Schema-Änderung umsetzen, sondern nur über eine neue Route + Template.
 Gleichzeitig besteht in der App bereits ein bekanntes, ungelöstes Datenschutzproblem: das öffentliche Leaderboard zeigt Username und
 Wohnort jedes Spielers ohne Login-Schutz. Eine Profilseite würde diese Art der Datenexposition (Spielhistorie, ggf. weitere persönliche Felder) 
 an einer zusätzlichen Stelle bündeln.
