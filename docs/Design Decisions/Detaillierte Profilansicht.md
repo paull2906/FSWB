@@ -12,7 +12,7 @@ Status
 : Decided 
 
 Updated
-: 21-07-2026
+: 21-Jul-2026
 
 ## Problem Statement
 
