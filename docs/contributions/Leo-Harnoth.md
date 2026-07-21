@@ -17,7 +17,7 @@ nav_order: 1
 ## Meta-Goals
 
 ### Target grade
-1,3
+2,0
 
 ### Personal goals
 
